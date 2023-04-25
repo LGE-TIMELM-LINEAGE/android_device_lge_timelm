@@ -1,0 +1,39 @@
+service vendor.atd /vendor/bin/atd ${ro.serialno}
+    socket atd stream 0660 system system
+    class main
+
+service vendor.frstd /vendor/bin/frstd
+    class main
+
+on property:vendor.lge.frstd.ctrl.run=yes
+    restart vendor.frstd
+
+on property:vendor.lge.frstd.ctrl.run=no
+    stop vendor.frstd
+
+on post-fs-data
+    # create dir for logsave
+    mkdir /data/vendor/factory 0775 system system
+
+    # create startday file
+    mkdir /mnt/vendor/persist-lg/startday 0771 system radio
+    chown system radio /mnt/vendor/persist-lg/startday
+    chmod 0771 /mnt/vendor/persist-lg/startday
+
+    chown system radio /mnt/vendor/persist-lg/startday/date
+    chmod 0771 /mnt/vendor/persist-lg/startday/date
+
+    chown system radio /mnt/vendor/persist-lg/startday/isValid
+    chmod 0771 /mnt/vendor/persist-lg/startday/isValid
+
+    # change permission of at_mdm0
+    chown radio radio /dev/at_mdm0
+    chmod 0660 /dev/at_mdm0
+
+    # change permission of /sys/class/android_usb/android0/lock
+    chown system system /sys/class/android_usb/android0/lock
+    chmod 0664 /sys/class/android_usb/android0/lock
+
+    # change permission of /sys/kernel/atd_mid/atd_status
+    chown system system /sys/kernel/atd_mid/atd_status
+    chmod 0660 /sys/kernel/atd_mid/atd_status

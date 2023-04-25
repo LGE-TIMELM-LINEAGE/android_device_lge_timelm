@@ -1,0 +1,2 @@
+vendor.lge.hardware.powerhint.rescontrol::IResControl          u:object_r:default_android_hwservice:s0
+vendor.lge.hardware.biometrics.fingerprint::ILgeBiometricsFingerprint	u:object_r:hal_fingerprint_hwservice:s0 

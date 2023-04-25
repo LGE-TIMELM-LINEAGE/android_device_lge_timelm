@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app-list version="19051601">
+	<app-array sw="1">
+		<item activity_name="com.lge.bnr/com.lge.bnr.service.BNRNotiDetailActivity">
+			<action>TCONF_ENABLE</action>
+			<parameter>TCONF_CPUHIGHBUSY</parameter>
+		</item>
+	</app-array>
+</app-list>

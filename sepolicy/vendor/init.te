@@ -1,0 +1,12 @@
+# init permissions
+
+allow init hidl_base_hwservice:hwservice_manager { add };
+
+
+# prevented by neverallows
+#allow init vendor_hal_perf_hwservice:service_manager { find };
+#allow init hal_vibrator_service:service_manager { add };
+#allow init vendor_qdisplay_service:service_manager { find };
+#allow init default_android_hwservice:hwservice_manager { add find };
+#allow init hal_lineage_touch_hwservice:hwservice_manager { add find };
+#allow init hal_lineage_livedisplay_hwservice:hwservice_manager { add find };

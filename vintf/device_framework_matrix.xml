@@ -1,0 +1,5158 @@
+<compatibility-matrix version="2.0" type="framework" level="5">
+    <hal format="hidl" optional="true">
+        <name>android.hardware.atrace</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAtraceDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.audio</name>
+        <version>6.0</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.audio.effect</name>
+        <version>6.0</version>
+        <interface>
+            <name>IEffectsFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.authsecret</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAuthSecret</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.automotive.audiocontrol</name>
+        <version>1.0</version>
+        <version>2.0</version>
+        <interface>
+            <name>IAudioControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.automotive.can</name>
+        <version>1.0</version>
+        <interface>
+            <name>ICanBus</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+        <interface>
+            <name>ICanController</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.automotive.evs</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IEvsEnumerator</name>
+            <instance>default</instance>
+            <regex-instance>[a-z]+/[0-9]+</regex-instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.automotive.occupant_awareness</name>
+        <interface>
+            <name>IOccupantAwareness</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.automotive.sv</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISurroundViewService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.automotive.vehicle</name>
+        <version>2.0</version>
+        <interface>
+            <name>IVehicle</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.biometrics.face</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IBiometricsFace</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>2.1-2</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.bluetooth</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.bluetooth.audio</name>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.boot</name>
+        <version>1.1</version>
+        <interface>
+            <name>IBootControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.broadcastradio</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IBroadcastRadioFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.broadcastradio</name>
+        <version>2.0</version>
+        <interface>
+            <name>IBroadcastRadio</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.camera.provider</name>
+        <version>2.4-6</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <regex-instance>[^/]+/[0-9]+</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.cas</name>
+        <version>1.1-2</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.confirmationui</name>
+        <version>1.0</version>
+        <interface>
+            <name>IConfirmationUI</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.contexthub</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IContexthub</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.drm</name>
+        <version>1.3</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.dumpstate</name>
+        <version>1.1</version>
+        <interface>
+            <name>IDumpstateDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.gatekeeper</name>
+        <version>1.0</version>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.gnss</name>
+        <version>1.0-1</version>
+        <version>2.0-1</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>default</instance>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.graphics.allocator</name>
+        <version>2.0</version>
+        <version>3.0</version>
+        <version>4.0</version>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.graphics.composer</name>
+        <version>2.1-4</version>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.graphics.mapper</name>
+        <version>2.1</version>
+        <version>3.0</version>
+        <version>4.0</version>
+        <interface>
+            <name>IMapper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.health</name>
+        <version>2.1</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.health.storage</name>
+        <version>1.0</version>
+        <interface>
+            <name>IStorage</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.identity</name>
+        <interface>
+            <name>IIdentityCredentialStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.input.classifier</name>
+        <version>1.0</version>
+        <interface>
+            <name>IInputClassifier</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.ir</name>
+        <version>1.0</version>
+        <interface>
+            <name>IConsumerIr</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.keymaster</name>
+        <version>3.0</version>
+        <version>4.0-1</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.keymaster</name>
+        <version>4.0-1</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>strongbox</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.light</name>
+        <interface>
+            <name>ILights</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.media.c2</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IComponentStore</name>
+            <regex-instance>default[0-9]*</regex-instance>
+            <regex-instance>vendor[0-9]*_software</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.media.omx</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOmx</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.memtrack</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMemtrack</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.neuralnetworks</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IDevice</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.nfc</name>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.oemlock</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOemLock</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="false">
+        <name>android.hardware.power</name>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.power.stats</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPowerStats</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.4</version>
+        <version>1.5</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+            <instance>slot3</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.2</version>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio.config</name>
+        <version>1.1</version>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.rebootescrow</name>
+        <interface>
+            <name>IRebootEscrow</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.renderscript</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.secure_element</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>ISecureElement</name>
+            <regex-instance>SIM[1-9][0-9]*</regex-instance>
+            <regex-instance>eSE[1-9][0-9]*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.sensors</name>
+        <version>1.0</version>
+        <version>2.0-1</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.soundtrigger</name>
+        <version>2.0-3</version>
+        <interface>
+            <name>ISoundTriggerHw</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tetheroffload.config</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tetheroffload.control</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.thermal</name>
+        <version>2.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tv.cec</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHdmiCec</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tv.input</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITvInput</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tv.tuner</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITuner</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.usb</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.usb.gadget</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IUsbGadget</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.vibrator</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.vibrator</name>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.vr</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVr</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.weaver</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWeaver</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.wifi</name>
+        <version>1.0-4</version>
+        <interface>
+            <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.wifi.hostapd</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>IHostapd</name>
+            <instance>default</instance>
+            <instance>wigighostapd</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.wifi.supplicant</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.ussys.tp</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITp</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.display.config</name>
+        <version>1.0-15</version>
+        <version>2.0</version>
+        <interface>
+            <name>IDisplayConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.qccsyshal</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQccsyshal</name>
+            <instance>qccsyshal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.qccsyshal</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQccsyshal</name>
+            <instance>qccsyshal</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.media.omx</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOmx</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.memtrack</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMemtrack</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.neuralnetworks</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>IDevice</name>
+            <regex-instance>.*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.nfc</name>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.oemlock</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOemLock</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.power</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.power.stats</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPowerStats</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.4</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+            <instance>slot3</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.2</version>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio.config</name>
+        <version>1.1</version>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.renderscript</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.secure_element</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureElement</name>
+            <regex-instance>SIM[1-9][0-9]*</regex-instance>
+            <regex-instance>eSE[1-9][0-9]*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.sensors</name>
+        <version>1.0</version>
+        <version>2.0</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.soundtrigger</name>
+        <version>2.0-2</version>
+        <interface>
+            <name>ISoundTriggerHw</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tetheroffload.config</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tetheroffload.control</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.thermal</name>
+        <version>2.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tv.cec</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHdmiCec</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tv.input</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITvInput</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.usb</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.usb.gadget</name>
+        <version>1.0</version>
+        <interface>
+            <name>IUsbGadget</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.renderscript</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.btconfigstore</name>
+        <version>1.0</version>
+        <version>2.0</version>
+        <interface>
+            <name>IBTConfigStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio.deprecated</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOemHook</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.vibrator</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.vr</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVr</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.weaver</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWeaver</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.wifi</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.wifi.hostapd</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IHostapd</name>
+            <instance>default</instance>
+            <instance>wigighostapd</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.wifi.supplicant</name>
+        <version>1.0-2</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+            <name>com.dsi.ant</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAnt</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.dsi.ant</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAnt</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.dpm.api</name>
+            <version>1.0</version>
+            <interface>
+                <name>IdpmQmi</name>
+                <instance>dpmQmiService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.dpm.api</name>
+            <version>1.0</version>
+            <interface>
+                <name>IdpmQmi</name>
+                <instance>dpmQmiService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.imscmservice</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IImsCmService</name>
+                <instance>qti.ims.connectionmanagerservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.imscmservice</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IImsCmService</name>
+                <instance>qti.ims.connectionmanagerservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.uceservice</name>
+            <version>2.0-1</version>
+            <version>2.2</version>
+            <interface>
+                <name>IUceService</name>
+                <instance>com.qualcomm.qti.uceservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.uceservice</name>
+            <version>2.0-1</version>
+            <version>2.2</version>
+            <interface>
+                <name>IUceService</name>
+                <instance>com.qualcomm.qti.uceservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.wifidisplayhal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDSManager</name>
+                <instance>wifidisplaydshal</instance>
+            </interface>
+            <interface>
+                <name>IHDCPSession</name>
+                <instance>wifidisplayhdcphal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.qualcomm.qti.wifidisplayhal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDSManager</name>
+                <instance>wifidisplaydshal</instance>
+            </interface>
+            <interface>
+                <name>IHDCPSession</name>
+                <instance>wifidisplayhdcphal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.quicinc.cne.api</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IApiService</name>
+                <instance>cnd</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.quicinc.cne.api</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IApiService</name>
+                <instance>cnd</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.quicinc.cne.server</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IServer</name>
+                <instance>cnd</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>com.quicinc.cne.server</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IServer</name>
+                <instance>cnd</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.display.color</name>
+            <version>1.0-5</version>
+            <interface>
+                <name>IDisplayColor</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.display.color</name>
+            <version>1.0-5</version>
+            <interface>
+                <name>IDisplayColor</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.display.config</name>
+            <version>1.0-15</version>
+            <version>2.0</version>
+            <interface>
+                <name>IDisplayConfig</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.display.config</name>
+            <version>1.0-15</version>
+            <version>2.0</version>
+            <interface>
+                <name>IDisplayConfig</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.display.postproc</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDisplayPostproc</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.display.postproc</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDisplayPostproc</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.gnd.hardware.payment.lgpayd</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILGPayDaemonHWService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.insidesecure.vpnclientd</name>
+            <version>1.0</version>
+            <interface>
+                <name>ITransport</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.accessory</name>
+            <version>1.1</version>
+            <interface>
+                <name>IAccessory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.accessory.uevent</name>
+            <version>1.2</version>
+            <interface>
+                <name>IAccessoryUevent</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.battery</name>
+            <version>1.0</version>
+            <interface>
+                <name>IBattery</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.biometrics.fingerprint</name>
+            <version>2.1-2</version>
+            <interface>
+                <name>ILgeBiometricsFingerprint</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.bootproperty</name>
+            <version>1.0</version>
+            <interface>
+                <name>IBootProperty</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.cameraex</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICameraEx</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.charger</name>
+            <version>1.1</version>
+            <interface>
+                <name>ICharger</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.coverdisplay</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICoverDisplay</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.display.brightness</name>
+            <version>1.2</version>
+            <interface>
+                <name>IDisplayBrightness</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.display.general</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDisplayGeneral</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.display.tune</name>
+            <version>1.3</version>
+            <interface>
+                <name>IDisplayTune</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.display.uevent</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDisplayUevent</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.dualscreen</name>
+            <version>1.1</version>
+            <interface>
+                <name>IDualScreen</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.fingertest</name>
+            <version>2.0</version>
+            <interface>
+                <name>IFingerTest</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.ftmitem</name>
+            <version>1.0</version>
+            <interface>
+                <name>IFtmitem</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.gnss</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILgeGnss</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.laop</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILgeLaop</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.lgatcmd</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILgAtCmd</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.lgdata</name>
+            <version>1.1</version>
+            <interface>
+                <name>ILgData</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>ILgDataVendorRil</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.lpwg</name>
+            <version>1.4</version>
+            <interface>
+                <name>ILpwg</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.msp</name>
+            <version>1.0</version>
+            <interface>
+                <name>IMsp</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.payment.cdcvm</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICvmNative</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.payment.giftcard</name>
+            <version>1.0</version>
+            <interface>
+                <name>IGiftcardDaemon</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.payment.mme</name>
+            <version>1.0</version>
+            <interface>
+                <name>IMMENative</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.platform</name>
+            <version>1.0</version>
+            <version>1.1</version>
+            <version>1.2</version>
+            <interface>
+                <name>IPlatform</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.powercontrol</name>
+            <version>1.0</version>
+            <version>1.1</version>
+            <version>1.2</version>
+            <version>1.3</version>
+            <interface>
+                <name>IPowercontrol</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.powerhint.rescontrol</name>
+            <version>2.0</version>
+            <interface>
+                <name>IResControl</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.property</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IProperty</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.radio</name>
+            <version>2.0</version>
+            <interface>
+                <name>ILgeRadio</name>
+                <instance>lge_radio</instance>
+                <instance>lge_radio2</instance>
+                <instance>radio1_wifi</instance>
+                <instance>radio2_wifi</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.schedcas</name>
+            <version>1.0</version>
+            <version>1.1</version>
+            <interface>
+                <name>ICAS</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.sdcardtray</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISDCardTray</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.sensortest</name>
+            <version>1.0-2</version>
+            <interface>
+                <name>ISensorTest</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.soi</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISoi</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.storageinfo</name>
+            <version>1.1</version>
+            <interface>
+                <name>IStorageInfo</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.thermal</name>
+            <version>1.0</version>
+            <version>1.1</version>
+            <version>1.2</version>
+            <interface>
+                <name>IThermal</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.touch</name>
+            <version>1.1</version>
+            <interface>
+                <name>ITouch</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.usb</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILgeUsb</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.usb.uevent</name>
+            <version>1.0</version>
+            <interface>
+                <name>IUsbUEvent</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.vibrator</name>
+            <version>2.0</version>
+            <interface>
+                <name>IVibratorEx</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.vss_ims</name>
+            <version>1.0</version>
+            <interface>
+                <name>IVssIms</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.wifi.hal</name>
+            <version>1.1</version>
+            <interface>
+                <name>IWifiLgeHal</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.wifi.hostapd</name>
+            <version>1.0</version>
+            <interface>
+                <name>IHostapdCallback</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>IHostapdEx</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.wifi.hostapd</name>
+            <version>2.0</version>
+            <interface>
+                <name>IHostapdCallback</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>IHostapdEx</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.lge.hardware.wifi.hostapd</name>
+            <version>3.0</version>
+            <interface>
+                <name>IHostapdCallback</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>IHostapdEx</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.nxp.hardware.nfc</name>
+            <version>1.0-1</version>
+            <version>2.0</version>
+            <interface>
+                <name>INqNfc</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.nxp.hardware.nfc</name>
+            <version>1.0-1</version>
+            <version>2.0</version>
+            <interface>
+                <name>INqNfc</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.nxp.nxpnfc</name>
+            <version>2.0</version>
+            <interface>
+                <name>INxpNfc</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.nxp.nxpnfclegacy</name>
+            <version>1.0</version>
+            <interface>
+                <name>INxpNfcLegacy</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.nxp.nxpnfclegacy</name>
+            <version>1.0</version>
+            <interface>
+                <name>INxpNfcLegacy</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.nxp.nxpnfclegacy</name>
+            <version>1.0</version>
+            <interface>
+                <name>INxpNfcLegacy</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.automotive.qcarcam</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQcarCamera</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.automotive.qcarcam</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQcarCamera</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.data.factory</name>
+            <version>1.0</version>
+            <version>2.0-3</version>
+            <interface>
+                <name>IFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.data.factory</name>
+            <version>1.0</version>
+            <version>2.0-3</version>
+            <interface>
+                <name>IFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.diaghal</name>
+            <version>1.0</version>
+            <interface>
+                <name>Idiag</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.diaghal</name>
+            <version>1.0</version>
+            <interface>
+                <name>Idiag</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.esepowermanager</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IEsePowerManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.esepowermanager</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IEsePowerManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.gnss</name>
+            <version>1.0-2</version>
+            <version>2.0-1</version>
+            <version>3.0</version>
+            <version>4.0</version>
+            <interface>
+                <name>ILocHidlGnss</name>
+                <instance>gnss_vendor</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.gnss</name>
+            <version>1.0-2</version>
+            <version>2.0-1</version>
+            <version>3.0</version>
+            <version>4.0</version>
+            <interface>
+                <name>ILocHidlGnss</name>
+                <instance>gnss_vendor</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.alarm</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAlarm</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.alarm</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAlarm</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.audiohalext</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAudioHalExt</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.audiohalext</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAudioHalExt</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.bluetooth_audio</name>
+            <version>2.0-1</version>
+            <interface>
+                <name>IBluetoothAudioProvidersFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.bluetooth_audio</name>
+            <version>2.0-1</version>
+            <interface>
+                <name>IBluetoothAudioProvidersFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.bluetooth_sar</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IBluetoothSar</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.bluetooth_sar</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IBluetoothSar</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.btconfigstore</name>
+            <version>1.0</version>
+            <version>2.0</version>
+            <interface>
+                <name>IBTConfigStore</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.btconfigstore</name>
+            <version>1.0</version>
+            <version>2.0</version>
+            <interface>
+                <name>IBTConfigStore</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.cacert</name>
+            <version>1.0</version>
+            <interface>
+                <name>IService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.cacert</name>
+            <version>1.0</version>
+            <interface>
+                <name>IService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.camera.postproc</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPostProcService</name>
+                <instance>camerapostprocservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.camera.postproc</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPostProcService</name>
+                <instance>camerapostprocservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.capabilityconfigstore</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICapabilityConfigStore</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.capabilityconfigstore</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICapabilityConfigStore</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.cryptfshw</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICryptfsHw</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.cryptfshw</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICryptfsHw</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.cvp</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICvp</name>
+                <instance>cvphalservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.cvp</name>
+            <version>1.0</version>
+            <interface>
+                <name>ICvp</name>
+                <instance>cvphalservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.data.connection</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IDataConnection</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.data.connection</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IDataConnection</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.data.iwlan</name>
+            <version>1.0</version>
+            <interface>
+                <name>IIWlan</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.data.iwlan</name>
+            <version>1.0</version>
+            <interface>
+                <name>IIWlan</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.data.latency</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILinkLatency</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.data.latency</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILinkLatency</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.debugutils</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDebugUtils</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.debugutils</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDebugUtils</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.allocator</name>
+            <version>1.0</version>
+            <version>3.0</version>
+            <version>4.0</version>
+            <interface>
+                <name>IQtiAllocator</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.allocator</name>
+            <version>1.0</version>
+            <version>3.0</version>
+            <version>4.0</version>
+            <interface>
+                <name>IQtiAllocator</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.composer</name>
+            <version>2.0-1</version>
+            <version>3.0</version>
+            <interface>
+                <name>IQtiComposer</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.composer</name>
+            <version>2.0-1</version>
+            <version>3.0</version>
+            <interface>
+                <name>IQtiComposer</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.demura</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDemuraFileFinder</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.demura</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDemuraFileFinder</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.mapper</name>
+            <version>2.0</version>
+            <version>3.0</version>
+            <version>4.0</version>
+            <interface>
+                <name>IQtiMapper</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.display.mapper</name>
+            <version>2.0</version>
+            <version>3.0</version>
+            <version>4.0</version>
+            <interface>
+                <name>IQtiMapper</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.dsp</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDspService</name>
+                <instance>dspservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.dsp</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDspService</name>
+                <instance>dspservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.eid</name>
+            <version>1.0</version>
+            <interface>
+                <name>IEid</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.eid</name>
+            <version>1.0</version>
+            <interface>
+                <name>IEid</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.embmssl</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IEmbms</name>
+                <instance>embmsslServer0</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.embmssl</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IEmbms</name>
+                <instance>embmsslServer0</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.factory</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.factory</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.fingerprint</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQtiExtendedFingerprint</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.fingerprint</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQtiExtendedFingerprint</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.fm</name>
+            <version>1.0</version>
+            <interface>
+                <name>IFmHci</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.fm</name>
+            <version>1.0</version>
+            <interface>
+                <name>IFmHci</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.fstman</name>
+            <version>1.0</version>
+            <interface>
+                <name>IFstManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.fstman</name>
+            <version>1.0</version>
+            <interface>
+                <name>IFstManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.improvetouch.blobmanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IBlobManager</name>
+                <instance>BlobManagerService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.improvetouch.blobmanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IBlobManager</name>
+                <instance>BlobManagerService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.improvetouch.gesturemanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IGestureManager</name>
+                <instance>GestureManagerService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.improvetouch.gesturemanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IGestureManager</name>
+                <instance>GestureManagerService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
+            <version>1.0</version>
+            <interface>
+                <name>ITouchCompanion</name>
+                <instance>TouchCompanionService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
+            <version>1.0</version>
+            <interface>
+                <name>ITouchCompanion</name>
+                <instance>TouchCompanionService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.iop</name>
+            <version>2.0</version>
+            <interface>
+                <name>IIop</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.iop</name>
+            <version>2.0</version>
+            <interface>
+                <name>IIop</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.limits</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILimits</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.limits</name>
+            <version>1.0</version>
+            <interface>
+                <name>ILimits</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.mwqemadapter</name>
+            <version>1.0</version>
+            <interface>
+                <name>IMwqemAdapter</name>
+                <instance>MwqemAdapter</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.mwqemadapter</name>
+            <version>1.0</version>
+            <interface>
+                <name>IMwqemAdapter</name>
+                <instance>MwqemAdapter</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.perf</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IPerf</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.perf</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>IPerf</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qccsyshal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQccsyshal</name>
+                <instance>qccsyshal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qccsyshal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQccsyshal</name>
+                <instance>qccsyshal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qccvndhal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQccvndhal</name>
+                <instance>qccvndhal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qccvndhal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQccvndhal</name>
+                <instance>qccvndhal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qconfig</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQConfig</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qconfig</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQConfig</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qdutils_disp</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQdutilsDisp</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qdutils_disp</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQdutilsDisp</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qseecom</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQSEECom</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qseecom</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQSEECom</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qteeconnector</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAppConnector</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>IGPAppConnector</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.qteeconnector</name>
+            <version>1.0</version>
+            <interface>
+                <name>IAppConnector</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>IGPAppConnector</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.am</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQcRilAudio</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.am</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQcRilAudio</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.ims</name>
+            <version>1.0-8</version>
+            <interface>
+                <name>IImsRadio</name>
+                <instance>imsradio0</instance>
+                <instance>imsradio1</instance>
+            </interface>
+        </hal>
+        <hal format="aidl" optional="true">
+            <name>vendor.qti.hardware.radio.ims</name>
+            <version>1-3</version>
+            <interface>
+                <name>IImsRadio</name>
+                <instance>imsradio0</instance>
+                <instance>imsradio1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDeviceInfo</name>
+                <instance>deviceinfo</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+            <version>1.0</version>
+            <interface>
+                <name>IDeviceInfo</name>
+                <instance>deviceinfo</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.lpa</name>
+            <version>1.0-2</version>
+            <interface>
+                <name>IUimLpa</name>
+                <instance>UimLpa0</instance>
+                <instance>UimLpa1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.lpa</name>
+            <version>1.0-2</version>
+            <interface>
+                <name>IUimLpa</name>
+                <instance>UimLpa0</instance>
+                <instance>UimLpa1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.qcrilhook</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQtiOemHook</name>
+                <instance>oemhook0</instance>
+                <instance>oemhook1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.qcrilhook</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQtiOemHook</name>
+                <instance>oemhook0</instance>
+                <instance>oemhook1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.qtiradio</name>
+            <version>1.0</version>
+            <version>2.0-5</version>
+            <interface>
+                <name>IQtiRadio</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.qtiradio</name>
+            <version>1.0</version>
+            <version>2.0-5</version>
+            <interface>
+                <name>IQtiRadio</name>
+                <instance>slot1</instance>
+                <instance>slot2</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.uim</name>
+            <version>1.1-2</version>
+            <interface>
+                <name>IUim</name>
+                <instance>Uim0</instance>
+                <instance>Uim1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.uim</name>
+            <version>1.1-2</version>
+            <interface>
+                <name>IUim</name>
+                <instance>Uim0</instance>
+                <instance>Uim1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.uim_remote_client</name>
+            <version>1.0</version>
+            <interface>
+                <name>IUimRemoteServiceClient</name>
+                <instance>uimRemoteClient0</instance>
+                <instance>uimRemoteClient1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.uim_remote_client</name>
+            <version>1.0</version>
+            <interface>
+                <name>IUimRemoteServiceClient</name>
+                <instance>uimRemoteClient0</instance>
+                <instance>uimRemoteClient1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.uim_remote_server</name>
+            <version>1.0</version>
+            <interface>
+                <name>IUimRemoteServiceServer</name>
+                <instance>uimRemoteServer0</instance>
+                <instance>uimRemoteServer1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.radio.uim_remote_server</name>
+            <version>1.0</version>
+            <interface>
+                <name>IUimRemoteServiceServer</name>
+                <instance>uimRemoteServer0</instance>
+                <instance>uimRemoteServer1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.scve.objecttracker</name>
+            <version>1.0</version>
+            <interface>
+                <name>IObjectTracker</name>
+                <instance>objectTracker</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.scve.objecttracker</name>
+            <version>1.0</version>
+            <interface>
+                <name>IObjectTracker</name>
+                <instance>objectTracker</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.scve.panorama</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPanoramaStitching</name>
+                <instance>panoStitching</instance>
+            </interface>
+            <interface>
+                <name>IPanoramaTracking</name>
+                <instance>panoTracking</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.scve.panorama</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPanoramaStitching</name>
+                <instance>panoStitching</instance>
+            </interface>
+            <interface>
+                <name>IPanoramaTracking</name>
+                <instance>panoTracking</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.seccam</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISecCam</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.seccam</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISecCam</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.secureprocessor.device</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISecureProcessor</name>
+                <instance>qti-tee</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.secureprocessor.device</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISecureProcessor</name>
+                <instance>qti-tee</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.sensorscalibrate</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISensorsCalibrate</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.sensorscalibrate</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISensorsCalibrate</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.servicetracker</name>
+            <version>1.0-2</version>
+            <interface>
+                <name>IServicetracker</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.servicetracker</name>
+            <version>1.0-2</version>
+            <interface>
+                <name>IServicetracker</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.slmadapter</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISlmAdapter</name>
+                <instance>SlmAdapter</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.slmadapter</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISlmAdapter</name>
+                <instance>SlmAdapter</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.soter</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISoter</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.soter</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISoter</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.systemhelper</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISystemEvent</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>ISystemResource</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.systemhelper</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISystemEvent</name>
+                <instance>default</instance>
+            </interface>
+            <interface>
+                <name>ISystemResource</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.trustedui</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>ITrustedInput</name>
+                <instance>default</instance>
+                <instance>qtee-vm</instance>
+            </interface>
+            <interface>
+                <name>ITrustedUI</name>
+                <instance>default</instance>
+                <instance>qtee-vm</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.trustedui</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>ITrustedInput</name>
+                <instance>default</instance>
+                <instance>qtee-vm</instance>
+            </interface>
+            <interface>
+                <name>ITrustedUI</name>
+                <instance>default</instance>
+                <instance>qtee-vm</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.tui_comm</name>
+            <version>1.0</version>
+            <interface>
+                <name>ITuiComm</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.tui_comm</name>
+            <version>1.0</version>
+            <interface>
+                <name>ITuiComm</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.vpp</name>
+            <version>1.1-3</version>
+            <version>2.0</version>
+            <interface>
+                <name>IHidlVppService</name>
+                <instance>vppService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.vpp</name>
+            <version>1.1-3</version>
+            <version>2.0</version>
+            <interface>
+                <name>IHidlVppService</name>
+                <instance>vppService</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifi.hostapd</name>
+            <version>1.0-3</version>
+            <interface>
+                <name>IHostapdVendor</name>
+                <instance>default</instance>
+                <instance>wigighostapd</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifi.hostapd</name>
+            <version>1.0-3</version>
+            <interface>
+                <name>IHostapdVendor</name>
+                <instance>default</instance>
+                <instance>wigighostapd</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifi.supplicant</name>
+            <version>2.0-3</version>
+            <interface>
+                <name>ISupplicantVendor</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifi.supplicant</name>
+            <version>2.0-3</version>
+            <interface>
+                <name>ISupplicantVendor</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifi.wifilearner</name>
+            <version>1.0</version>
+            <interface>
+                <name>IWifiStats</name>
+                <instance>wifiStats</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifi.wifilearner</name>
+            <version>1.0</version>
+            <interface>
+                <name>IWifiStats</name>
+                <instance>wifiStats</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifidisplaysession</name>
+            <version>1.0</version>
+            <interface>
+                <name>IWifiDisplaySession</name>
+                <instance>wifidisplaysession</instance>
+            </interface>
+            <interface>
+                <name>IWifiDisplaySessionAudioTrack</name>
+                <instance>wifidisplaysessionaudiotrack</instance>
+            </interface>
+            <interface>
+                <name>IWifiDisplaySessionImageTrack</name>
+                <instance>wifidisplaysessionimagetrack</instance>
+            </interface>
+            <interface>
+                <name>IWifiDisplaySessionVideoTrack</name>
+                <instance>wifidisplaysessionvideotrack</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wifidisplaysession</name>
+            <version>1.0</version>
+            <interface>
+                <name>IWifiDisplaySession</name>
+                <instance>wifidisplaysession</instance>
+            </interface>
+            <interface>
+                <name>IWifiDisplaySessionAudioTrack</name>
+                <instance>wifidisplaysessionaudiotrack</instance>
+            </interface>
+            <interface>
+                <name>IWifiDisplaySessionImageTrack</name>
+                <instance>wifidisplaysessionimagetrack</instance>
+            </interface>
+            <interface>
+                <name>IWifiDisplaySessionVideoTrack</name>
+                <instance>wifidisplaysessionvideotrack</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wigig.netperftuner</name>
+            <version>1.0</version>
+            <interface>
+                <name>INetPerfTuner</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wigig.netperftuner</name>
+            <version>1.0</version>
+            <interface>
+                <name>INetPerfTuner</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wigig.supptunnel</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISuppTunnelProvider</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wigig.supptunnel</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISuppTunnelProvider</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wipower</name>
+            <version>1.0</version>
+            <interface>
+                <name>IWipower</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.hardware.wipower</name>
+            <version>1.0</version>
+            <interface>
+                <name>IWipower</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.ims.callinfo</name>
+            <version>1.0</version>
+            <interface>
+                <name>IService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.ims.callinfo</name>
+            <version>1.0</version>
+            <interface>
+                <name>IService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.ims.factory</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IImsFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.ims.factory</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>IImsFactory</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.imsrtpservice</name>
+            <version>3.0</version>
+            <interface>
+                <name>IRTPService</name>
+                <instance>imsrtpservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.imsrtpservice</name>
+            <version>3.0</version>
+            <interface>
+                <name>IRTPService</name>
+                <instance>imsrtpservice</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.memory.pasrmanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPasrManager</name>
+                <instance>pasrhal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.memory.pasrmanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPasrManager</name>
+                <instance>pasrhal</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.power.pasrmanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPasrManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.power.pasrmanager</name>
+            <version>1.0</version>
+            <interface>
+                <name>IPasrManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.qspmhal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQspmhal</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.qspmhal</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQspmhal</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.spu</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>ISPUManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.spu</name>
+            <version>1.0-1</version>
+            <interface>
+                <name>ISPUManager</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.voiceprint</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQtiVoicePrintService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.qti.voiceprint</name>
+            <version>1.0</version>
+            <interface>
+                <name>IQtiVoicePrintService</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.trustonic.tee</name>
+            <version>1.1</version>
+            <interface>
+                <name>ITee</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.trustonic.tee.tui</name>
+            <version>1.0</version>
+            <interface>
+                <name>ITui</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+    <kernel version="4.14.180" level="5">
+        <config>
+            <key>CONFIG_ADVISE_SYSCALLS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_AIO</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_BINDERFS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_BINDER_DEVICES</key>
+            <value type="string">binder,hwbinder,vndbinder</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_BINDER_IPC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ASHMEM</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_AUDIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BINFMT_ELF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BINFMT_SCRIPT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BLK_DEV_INITRD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BLK_DEV_LOOP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BLOCK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_JIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_SYSCALL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CC_STACKPROTECTOR_STRONG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUPS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_BPF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_CPUACCT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_FREEZER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_SCHED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CROSS_MEMORY_ATTACH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_AES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_CBC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_ECB</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_GCM</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_HMAC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD4</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD5</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_NULL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_SHA1</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_SHA256</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_SHA512</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEBUG_LIST</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEFAULT_SECURITY_SELINUX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEVMEM</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_DM_SNAPSHOT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DM_VERITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DUMMY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_EMBEDDED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_EPOLL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_EVENTFD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FHANDLE</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_FILE_LOCKING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FS_ENCRYPTION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FS_VERITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FS_VERITY_BUILTIN_SIGNATURES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FUSE_FS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FUTEX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HARDENED_USERCOPY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HID_GENERIC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HID_SONY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HIGH_RES_TIMERS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IKCONFIG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IKCONFIG_PROC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_ESP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_IPCOMP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_DIAG_DESTROY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_ESP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_UDP_DIAG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INOTIFY_USER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INPUT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INPUT_EVDEV</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INPUT_JOYSTICK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_FILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_IPTABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_MANGLE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_MATCH_RPFILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_NAT</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_RAW</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_TARGET_REJECT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_MIP6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_MULTIPLE_TABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_OPTIMISTIC_DAD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_ROUTER_PREF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_ROUTE_INFO</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_VTI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_ADVANCED_ROUTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_MULTICAST</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_MULTIPLE_TABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_ARPFILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_ARPTABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_ARP_MANGLE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_FILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_IPTABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_MANGLE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_MATCH_ECN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_MATCH_TTL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_NAT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_RAW</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_SECURITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_MASQUERADE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_NETMAP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_REDIRECT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_REJECT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_JOYSTICK_XPAD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_L2TP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MAGIC_SYSRQ</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MEMBARRIER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MMU</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MODULES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MODULE_FORCE_UNLOAD</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_MODULE_UNLOAD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MODVERSIONS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MULTIUSER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NAMESPACES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETDEVICES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_BPF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_COMMENT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_CONNLIMIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_CONNMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_CONNTRACK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_HASHLIMIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_HELPER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_IPRANGE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_LENGTH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_LIMIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_MAC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_MARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_OWNER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_PKTTYPE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_POLICY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QTAGUID</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2_LOG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_SOCKET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_STATE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_STATISTIC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_STRING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_TIME</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_U32</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CLASSIFY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CONNMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CONNSECMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_IDLETIMER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_MARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_NFLOG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_NFQUEUE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_SECMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_TCPMSS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_TPROXY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_TRACE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_CLS_ACT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_CLS_BPF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_CLS_U32</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_EMATCH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_EMATCH_U32</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_IPGRE_DEMUX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_IPVTI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_KEY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_NS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_SCHED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_SCH_HTB</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_SCH_INGRESS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NFSD</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_NFS_FS</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_AMANDA</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_EVENTS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_FTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_H323</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_IPV4</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_IPV6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_IRC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_NETBIOS_NS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_PPTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_SANE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_SECMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_TFTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_NETLINK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_PROTO_DCCP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_PROTO_SCTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_PROTO_UDPLITE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_NAT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_SOCKET_IPV4</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_SOCKET_IPV6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NO_HZ</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PACKET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PM_AUTOSLEEP</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_PM_WAKELOCKS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_POSIX_TIMERS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPPOL2TP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP_BSDCOMP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP_DEFLATE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP_MPPE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PREEMPT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PROC_FS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PROFILING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PSI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_QFMT_V2</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_QUOTA</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_QUOTACTL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_RTC_CLASS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_RT_GROUP_SCHED</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_SCHED_DEBUG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECCOMP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECCOMP_FILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECURITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECURITY_NETWORK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECURITY_SELINUX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SHMEM</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SIGNALFD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SND</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SOUND</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STAGING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STATIC_USERMODEHELPER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STRICT_KERNEL_RWX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STRICT_MODULE_RWX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SUSPEND</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SYNC_FILE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SYSFS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SYSVIPC</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_TASKSTATS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TASK_IO_ACCOUNTING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TASK_XACCT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TIMERFD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TTY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TUN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_UHID</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_UID_SYS_STATS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_UNIX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_ACC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_AUDIO_SRC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_FS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_MIDI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_UEVENT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_GADGET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_SUPPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USELIB</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_UTS_NS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_VETH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_VHOST</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_XFRM_INTERFACE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_XFRM_STATISTICS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_XFRM_USER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEBUG_FS</key>
+            <value type="tristate">n</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_AEABI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CPU_SW_DOMAIN_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEVKMEM</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_OABI_COMPAT</key>
+            <value type="tristate">n</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM64</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_ARM64_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ARMV8_DEPRECATED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_COMPAT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CP15_BARRIER_EMULATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SETEND_EMULATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SWP_EMULATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_X86</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_DEVKMEM</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_PAGE_TABLE_ISOLATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_RETPOLINE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_ACPI</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_OF</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_OF</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_ACPI</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_IKHEADERS</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>DISALLOW_CONFIG_IKHEADERS_IS_N</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_EXT4_FS</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_EXT4_FS_POSIX_ACL</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.180" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_F2FS_FS</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_F2FS_FS_POSIX_ACL</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <config>
+            <key>CONFIG_ADVISE_SYSCALLS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_AIO</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_BINDERFS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_BINDER_DEVICES</key>
+            <value type="string">binder,hwbinder,vndbinder</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_BINDER_IPC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ANDROID_LOW_MEMORY_KILLER</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_ASHMEM</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_AUDIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BINFMT_ELF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BINFMT_SCRIPT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BLK_DEV_INITRD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BLK_DEV_LOOP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BLOCK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPFILTER</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_JIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_SYSCALL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUPS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_BPF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_CPUACCT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_FREEZER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CGROUP_SCHED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CROSS_MEMORY_ATTACH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_AES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_CBC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_ECB</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_GCM</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_HMAC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD4</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD5</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_NULL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_SHA1</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_SHA256</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_SHA512</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEBUG_LIST</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEFAULT_SECURITY_SELINUX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEVMEM</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_DM_SNAPSHOT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DM_VERITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DUMMY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_EMBEDDED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_EPOLL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_EVENTFD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FHANDLE</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_FILE_LOCKING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FS_ENCRYPTION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FS_VERITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FS_VERITY_BUILTIN_SIGNATURES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FUSE_FS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FUTEX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_FW_CACHE</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_HARDENED_USERCOPY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HID_GENERIC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HID_SONY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_HIGH_RES_TIMERS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IKCONFIG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IKCONFIG_PROC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_ESP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_IPCOMP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_DIAG_DESTROY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_ESP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_UDP_DIAG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INOTIFY_USER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INPUT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INPUT_EVDEV</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INPUT_JOYSTICK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_FILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_IPTABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_MANGLE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_MATCH_RPFILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_NAT</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_RAW</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP6_NF_TARGET_REJECT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_MIP6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_MULTIPLE_TABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_OPTIMISTIC_DAD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_ROUTER_PREF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_ROUTE_INFO</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IPV6_VTI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_ADVANCED_ROUTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_MULTICAST</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_MULTIPLE_TABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_ARPFILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_ARPTABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_ARP_MANGLE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_FILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_IPTABLES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_MANGLE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_MATCH_ECN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_MATCH_TTL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_NAT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_RAW</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_SECURITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_MASQUERADE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_NETMAP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_REDIRECT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_IP_NF_TARGET_REJECT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_JOYSTICK_XPAD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_L2TP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MAGIC_SYSRQ</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MEMBARRIER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MMU</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MODULES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MODULE_FORCE_UNLOAD</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_MODULE_UNLOAD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MODVERSIONS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_MULTIUSER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NAMESPACES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETDEVICES</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_BPF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_COMMENT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_CONNLIMIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_CONNMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_CONNTRACK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_HASHLIMIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_HELPER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_IPRANGE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_LENGTH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_LIMIT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_MAC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_MARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_OWNER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_PKTTYPE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_POLICY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2_LOG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_SOCKET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_STATE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_STATISTIC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_STRING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_TIME</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_U32</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CLASSIFY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CONNMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CONNSECMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_CT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_IDLETIMER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_MARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_NFLOG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_NFQUEUE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_SECMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_TCPMSS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_TPROXY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NETFILTER_XT_TARGET_TRACE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_CLS_ACT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_CLS_BPF</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_CLS_U32</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_EMATCH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_EMATCH_U32</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_IPGRE_DEMUX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_IPVTI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_KEY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_NS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_SCHED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_SCH_HTB</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NET_SCH_INGRESS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NFSD</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_NFS_FS</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_AMANDA</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_EVENTS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_FTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_H323</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_IRC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_NETBIOS_NS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_PPTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_SANE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_SECMARK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_TFTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_NETLINK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_PROTO_DCCP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_PROTO_SCTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CT_PROTO_UDPLITE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_NAT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_SOCKET_IPV4</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_SOCKET_IPV6</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NO_HZ</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PACKET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PM_AUTOSLEEP</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_PM_WAKELOCKS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_POSIX_TIMERS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPPOL2TP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP_BSDCOMP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP_DEFLATE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPP_MPPE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PPTP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PREEMPT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PROC_FS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PROFILING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_PSI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_QFMT_V2</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_QUOTA</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_QUOTACTL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_RTC_CLASS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_RT_GROUP_SCHED</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_SCHED_DEBUG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECCOMP</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECCOMP_FILTER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECURITY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECURITY_NETWORK</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SECURITY_SELINUX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SHMEM</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SIGNALFD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SND</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SOUND</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STACKPROTECTOR</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STACKPROTECTOR_STRONG</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STAGING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STATIC_USERMODEHELPER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STRICT_KERNEL_RWX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_STRICT_MODULE_RWX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SUSPEND</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SYNC_FILE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SYSFS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SYSVIPC</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_TASKSTATS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TASK_IO_ACCOUNTING</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TASK_XACCT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TIMERFD</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TTY</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_TUN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_UHID</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_UID_SYS_STATS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_UNIX</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_ACC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_AUDIO_SRC</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_FS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_F_MIDI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_CONFIGFS_UEVENT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_GADGET</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USB_SUPPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_USELIB</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_UTS_NS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_VETH</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_VHOST</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_XFRM_INTERFACE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_XFRM_STATISTICS</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_XFRM_USER</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEBUG_FS</key>
+            <value type="tristate">n</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_AEABI</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CPU_SW_DOMAIN_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_DEVKMEM</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_OABI_COMPAT</key>
+            <value type="tristate">n</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM64</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_ARM64_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_ARMV8_DEPRECATED</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_COMPAT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CP15_BARRIER_EMULATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SETEND_EMULATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_SWP_EMULATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_X86</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_DEVKMEM</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
+            <key>CONFIG_PAGE_TABLE_ISOLATION</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_RETPOLINE</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_ACPI</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_OF</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_OF</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_ACPI</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_IKHEADERS</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>DISALLOW_CONFIG_IKHEADERS_IS_N</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_EXT4_FS</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_EXT4_FS_POSIX_ACL</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.110" level="5">
+        <conditions>
+            <config>
+                <key>CONFIG_F2FS_FS</key>
+                <value type="tristate">y</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_F2FS_FS_POSIX_ACL</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+</compatibility-matrix>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Included>
+	<Encoders>
+		<MediaCodec name="OMX.lge.flac.encoder" type="audio/x-lg-flac">
+			<Limit name="channel-count" max="2"/>
+		</MediaCodec>
+	</Encoders>
+	<Decoders>
+		<MediaCodec name="OMX.lge.alac.decoder" type="audio/x-lg-alac">
+			<Limit name="channel-count" max="1"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.adpcm.decoder" type="audio/adpcm">
+			<Limit name="channel-count" max="1"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.g726.decoder" type="audio/g726">
+			<Limit name="channel-count" max="1"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.mp3.decoder" type="audio/mpeg" rank="1">
+			<Limit name="channel-count" max="2"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.ac3.decoder" type="audio/ac3">
+			<Limit name="channel-count" max="2"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.mjpg.decoder" type="video/mjpg">
+			<Limit name="size" min="2x2" max="1920x1920"/>
+			<Limit name="performance-point-1920x1080" value="24"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.theora.decoder" type="video/theora">
+			<Limit name="size" min="2x2" max="1280x1280"/>
+			<Limit name="performance-point-1280x720" value="24"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.evrc.decoder" type="audio/x-lg-evrc">
+			<Limit name="channel-count" max="1"/>
+		</MediaCodec>
+		<MediaCodec name="OMX.lge.qcelp.decoder" type="audio/x-lg-qcelp">
+			<Limit name="channel-count" max="1"/>
+		</MediaCodec>
+	</Decoders>
+</Included>

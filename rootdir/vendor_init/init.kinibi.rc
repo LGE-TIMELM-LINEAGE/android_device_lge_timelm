@@ -1,0 +1,44 @@
+# This init.rc file is for Kinibi399
+# lge-secureboot@lge.com
+
+on init
+    export MC_AUTH_TOKEN_PATH /mnt/vendor/persist-lg/mcRegistry
+
+# For t-base
+service mobicore /vendor/bin/mcDriverDaemon
+    class core
+    user system
+    group system
+    disabled
+
+service tbaseLoader /vendor/bin/taskset 0f /vendor/bin/tbaseLoader tbase
+    user system
+    group system
+    class core
+    oneshot
+    disabled
+    seclabel u:r:tbaseLoader:s0
+
+# For LGE MID - simlock-security@lge.com
+on property:ro.boot.vendor.lge.laf=MID && property:vendor.sys.listeners.registered=true && property:vendor.lge.boot_completed=1
+    start vendor.ssgtzd
+
+on property:ro.boot.vendor.lge.laf=MID && property:vendor.sys.listeners.registered=true && property:vendor.lge.boot_completed=1
+    start lg_pvc_license
+
+on property:vendor.lge.mobicore.tbase.loaded=1
+    start mobicore
+
+on post-fs-data
+    mkdir /data/vendor/mcRegistry 0775 system system
+    mkdir /data/vendor/mcRegistry/TbStorage 0700 system system
+
+#on property:vold.decrypt=trigger_restart_framework
+#    start lg_pvc_license
+#    mkdir /data/vendor/mcRegistry 0775 system system
+#    mkdir /data/vendor/mcRegistry/TbStorage 0700 system system
+
+on property:sys.boot_completed=1
+    start lg_pvc_license
+
+# t-base END

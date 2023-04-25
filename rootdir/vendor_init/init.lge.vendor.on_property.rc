@@ -1,0 +1,68 @@
+#######################################################
+# LGP_DATA_TCPIP_TCP_SYN_RETRY_CONFIG_UPLUS
+#######################################################
+on property:ro.vendor.lge.build.target_operator=LGU
+    write /proc/sys/net/ipv4/tcp_syn_retries 4
+    write /proc/sys/net/mptcp/mptcp_syn_retries 1
+
+#######################################################
+# LGP_DATA_TCP_CONGESTION_CONTROL
+#######################################################
+on property:ro.vendor.lge.build.target_operator=KT
+   write /proc/sys/net/ipv4/tcp_congestion_control cubic
+
+on property:ro.vendor.lge.build.target_operator=DCM
+   write /proc/sys/net/ipv4/tcp_congestion_control cubic
+
+#######################################################
+# LGE_UICC, LGP_UICC, single/dual property setting at runtime
+# http://mlm.lge.com/di/browse/UICCREPORT-11582
+#######################################################
+on property:ro.boot.vendor.lge.sim_num=1
+    setprop persist.radio.multisim.config ss
+    setprop telephony.active_modems.max_count 1
+on property:ro.boot.vendor.lge.sim_num=2
+    setprop persist.radio.multisim.config dsds
+    setprop telephony.active_modems.max_count 2
+
+#######################################################
+# LGE_CHANGE_S, [display] feature : SP MIRRORING
+#######################################################
+on property:vendor.lge.wfd.spmirroring.backlight=0
+    write /sys/class/graphics/fb0/sp_link_backlight_off 0
+    write /sys/devices/virtual/input/lge_touch/sp_link_touch_off 0
+
+on property:vendor.lge.wfd.spmirroring.backlight=1
+    write /sys/class/graphics/fb0/sp_link_backlight_off 1
+    write /sys/devices/virtual/input/lge_touch/sp_link_touch_off 1
+
+########################################
+# KERNEL sreadahead
+########################################
+on property:sys.boot_completed=1
+    setprop vendor.lge.boot_completed 1
+
+########################################
+# Camera-system mediaprovidr
+########################################
+on property:ro.boot.vendor.lge.hydra=*
+    setprop ro.boot.product.lge.hydra ${ro.boot.vendor.lge.hydra}
+
+on property:ro.vendor.lge.capp_cupss.op.dir=*
+    setprop ro.product.lge.capp_cupss.op.dir ${ro.vendor.lge.capp_cupss.op.dir}
+
+on property:ro.vendor.lge.capp_cupss.rootdir=*
+    setprop ro.product.lge.capp_cupss.rootdir ${ro.vendor.lge.capp_cupss.rootdir}
+
+on property:ro.vendor.lge.build.target_operator=*
+    setprop ro.product.lge.build.target_operator ${ro.vendor.lge.build.target_operator}
+
+on property:ro.vendor.lge.build.target_country=*
+    setprop ro.product.lge.build.target_country ${ro.vendor.lge.build.target_country}
+
+######################################################
+# Trigger kernel crash when kernel moudle is not found
+######################################################
+on property:sys.boot_completed=1 && property:vendor.lge.trigger_crash_after_boot=1
+    setprop vendor.lge.trigger_crash_after_boot 0
+    write /proc/sysrq-trigger "c"

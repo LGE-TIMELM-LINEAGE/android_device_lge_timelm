@@ -1,0 +1,71 @@
+######## init.mid.service.rc ########
+
+on boot
+    mkdir /storage/external_SD
+
+on post-fs-data
+    # From R-OS, storage mount code trigger on zygote-start at init.rc, so add it directly
+    # Mount default storage into root namespace
+    mount none /mnt/runtime/default /storage bind rec
+    mount none none /storage slave rec
+
+    # To use /sdcard path
+    symlink /data/media/0 /mnt/user/0/primary
+
+    # NFC-9952 : Remove nfclock status
+    rm mnt/product/persist-lg/nfclock/nfclock_on
+
+# midd
+service midd /system_ext/bin/midd
+    class mid_service
+    user root
+    group root system radio sdcard_rw everybody
+    seclabel u:r:recovery:s0
+
+on property:ro.boot.vendor.lge.laf=MID && property:ro.vendor.lge.mid.bootstart=1
+    class_start mid_service
+
+# mid frp check
+service mid_frp /system_ext/bin/midd mid_frp
+    class mid_frp
+    user system
+    group system
+    seclabel u:r:recovery:s0
+    oneshot
+
+on property:dev.bootcomplete=1
+    class_start mid_frp
+    setprop vendor.lge.boot_completed 1
+
+    # Start logservice
+    setprop persist.vendor.lge.service.events.enable 1
+    setprop persist.vendor.lge.service.kernel.enable 1
+    setprop persist.vendor.lge.service.main.enable 1
+    setprop persist.vendor.lge.service.power.enable 1
+    setprop persist.vendor.lge.service.radio.enable 1
+    setprop persist.vendor.lge.service.system.enable 1
+
+    # Start checkpoint commitChange for mid boot
+    exec - system system -- /system/bin/vdc checkpoint commitChanges
+
+    # Stop iorapd service because of error log
+    stop iorapd
+
+on property:vendor.lge.factory.logsave=1
+    mkdir /data/vendor/factory/logsave 0775 system system
+    copy /data/logger/kernel.log /data/vendor/factory/logsave/kernel.log
+    copy /data/logger/kernel.log.1 /data/vendor/factory/logsave/kernel.log.1
+    copy /data/logger/main.log /data/vendor/factory/logsave/main.log
+    copy /data/logger/main.log.1 /data/vendor/factory/logsave/main.log.1
+    copy /data/logger/system.log /data/vendor/factory/logsave/system.log
+    copy /data/logger/system.log.1 /data/vendor/factory/logsave/system.log.1
+    copy /data/logger/radio.log /data/vendor/factory/logsave/radio.log
+    copy /data/logger/radio.log.1 /data/vendor/factory/logsave/radio.log.1
+    chmod 777 /data/vendor/factory/logsave/kernel.log
+    chmod 777 /data/vendor/factory/logsave/kernel.log.1
+    chmod 777 /data/vendor/factory/logsave/main.log
+    chmod 777 /data/vendor/factory/logsave/main.log.1
+    chmod 777 /data/vendor/factory/logsave/system.log
+    chmod 777 /data/vendor/factory/logsave/system.log.1
+    chmod 777 /data/vendor/factory/logsave/radio.log
+    chmod 777 /data/vendor/factory/logsave/radio.log.1

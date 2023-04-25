@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+  -->
+<permissions>
+    <privapp-permissions package="org.lineageos.settings.device">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="org.lineageos.settings.device.dac">
+        <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.android.systemui">
+        <permission name="android.permission.ACCESS_FINE_LOCATION"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.android.phone">
+        <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.android.cellbroadcastreceiver.module">
+        <permission name="READ_PHONE_STATE"/>
+        <permission name="ACCESS_FINE_LOCATION"/>
+    </privapp-permissions>
+
+
+</permissions>

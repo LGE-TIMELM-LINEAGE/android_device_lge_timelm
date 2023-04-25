@@ -1,0 +1,5 @@
+# fingerprint service
+type fingerprint, domain;
+type fingerprint_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(fingerprint)

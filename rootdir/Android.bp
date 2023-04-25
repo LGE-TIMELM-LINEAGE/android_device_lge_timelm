@@ -1,0 +1,13 @@
+prebuilt_etc {
+    name: "recovery.fstab",
+    src: "recovery.fstab",
+    vendor: true,
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.timelm.rc",
+    src: "init.recovery.timelm.rc",
+    sub_dir: "init",
+    recovery: true,
+}

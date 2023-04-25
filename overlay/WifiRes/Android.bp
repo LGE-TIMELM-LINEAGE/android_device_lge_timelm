@@ -1,0 +1,7 @@
+runtime_resource_overlay {
+    name: "LgeWifiOverlay",
+    theme: "WifiOverlay",
+    sdk_version: "current",
+    certificate: "platform",
+    vendor: true,
+}

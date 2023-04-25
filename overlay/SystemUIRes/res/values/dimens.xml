@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
+    <dimen name="config_rounded_mask_size">33.51999dip</dimen>
+    <!-- the padding on the start of the statusbar -->
+    <dimen name="status_bar_padding_start">0px</dimen>
+    <!-- the padding on the end of the statusbar -->
+    <dimen name="status_bar_padding_end">0px</dimen>
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">0px</dimen>
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+    <!-- Margin on the left side of the carrier text on Keyguard -->
+    <dimen name="keyguard_carrier_text_margin">@dimen/status_bar_padding_start</dimen>
+    <dimen name="config_backGestureInset">24.0dip</dimen>
+    <dimen name="config_minScrollbarTouchTarget">16.0dip</dimen>
+    <dimen name="config_viewConfigurationTouchSlop">7.0pt</dimen>
+    <dimen name="conversation_expand_button_top_margin_expanded">22px</dimen>
+    <dimen name="navigation_bar_height">48.0dip</dimen>
+    <dimen name="navigation_bar_width">48.0dip</dimen>
+    <dimen name="notification_action_emphasized_height">30.0dip</dimen>
+    <dimen name="notification_action_list_height">135px</dimen>
+    <dimen name="notification_content_margin">20.0dip</dimen>
+    <dimen name="notification_content_margin_end">8.0dip</dimen>
+    <dimen name="notification_content_margin_start">8.0dip</dimen>
+    <dimen name="notification_content_margin_top">46.0dip</dimen>
+    <dimen name="notification_header_background_height">50px</dimen>
+    <dimen name="notification_header_height">42.0dip</dimen>
+    <dimen name="notification_header_icon_size">13.0dip</dimen>
+    <dimen name="notification_header_margin_bottom">5.0dip</dimen>
+    <dimen name="notification_header_padding_bottom">0.0dip</dimen>
+    <dimen name="notification_header_padding_top">0.0dip</dimen>
+    <dimen name="notification_min_height">87.0dip</dimen>
+    <dimen name="notification_title_text_size">14.0sp</dimen>
+    <dimen name="resolver_icon_size">103px</dimen>
+    <dimen name="rounded_corner_radius">33.51999dip</dimen>
+    <dimen name="status_bar_height_portrait">28.97998dip</dimen>
+</resources>

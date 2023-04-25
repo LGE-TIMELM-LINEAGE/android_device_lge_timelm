@@ -1,0 +1,189 @@
+# This file is imported by init.{ro.hardware}.rc
+
+# LGE logger service rc
+# Does not exist on stock
+#import /init.lge.log.rc
+
+# import zram configurations
+# Does not exist on stock; in a different location
+import /init.lge.svelte.rc
+
+on init
+
+# LG override start - device/qcom/kona/init.target.rc
+on fs
+    start hwservicemanager
+    mkdir /mnt/vendor/spunvm 0660 system system
+
+# LG_START
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    wait /dev/block/bootdevice
+    mount_all /vendor/etc/fstab.${ro.hardware} --early
+    restorecon_recursive /persist
+    mkdir /persist/data 0700 system system
+# LG_END
+
+    #mount_all /vendor/etc/fstab.qcom --early
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+
+    chown system system /mnt/vendor/absolute
+    chmod 0750 /mnt/vendor/absolute
+    restorecon_recursive /mnt/vendor/absolute
+
+    chown system system /mnt/vendor/persist-lg
+    chmod 0771 /mnt/vendor/persist-lg
+    restorecon_recursive /mnt/vendor/persist-lg
+
+    chown system system /mnt/vendor/sns
+    chmod 0755 /mnt/vendor/sns
+    restorecon_recursive /mnt/vendor/sns
+
+on late-fs
+    wait_for_prop hwservicemanager.ready true
+    # cto-mc-security@lge.com. block wait_for_keymaster due to booting speed.
+    # exec_start wait_for_keymaster
+    #mount_all /vendor/etc/fstab.qcom --late
+# LG_START
+    mount_all /vendor/etc/fstab.${ro.hardware} --late
+# LG_END
+# LG override end
+
+on post-fs
+    chown system system /vendor/mpt
+    chmod 0775 /vendor/mpt
+
+    chown system system /vendor/persist-lg
+    chmod 0771 /vendor/persist-lg
+
+    chown system system /vendor/sns
+    chmod 0755 /vendor/sns
+
+    chown system system /vendor/fota
+    chmod 0755 /vendor/fota
+
+    chown root system /sys/module/lge_handle_panic/parameters/gen_adsp_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_bug
+    chown root system /sys/module/lge_handle_panic/parameters/gen_cdsp_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_modem_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_esoc0_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_slpi_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_venus_panic
+    chown root system /sys/module/lge_handle_panic/parameters/gen_wdt_bark
+    chown root system /sys/module/lge_handle_panic/parameters/gen_wdt_bite
+
+on property:vold.post_fs_data_done=1 && property:ro.boot.vendor.lge.forced_log=enable
+    setprop ro.vendor.lge.forced_log enable
+
+on property:ro.vendor.lge.forced_log=enable
+    setprop persist.vendor.lge.service.crash.enable 1
+    setprop persist.vendor.lge.service.kernel.enable 5
+    setprop persist.vendor.lge.service.main.enable 5
+    setprop persist.vendor.lge.service.system.enable 5
+    setprop persist.vendor.lge.service.radio.enable 5
+    setprop persist.vendor.lge.service.events.enable 5
+
+# forced_usb_path_change
+service forced_usb_path_change /vendor/bin/init.lge.forced_usb_path_change.sh
+    disabled
+    oneshot
+
+on property:vold.post_fs_data_done=1 && property:ro.boot.vendor.lge.forced_usb_path_change=enable
+    start forced_usb_path_change
+
+# enable & disable crash handler, rtb & trace event through property
+on property:persist.vendor.lge.service.crash.enable=*
+    restart service-crash
+
+service service-crash /vendor/bin/init.sm8250.crash.sh
+    disabled
+    oneshot
+
+on property:persist.vendor.lge.service.crash.enable=1
+    start console
+    # rtb filter
+    write /sys/module/msm_rtb/parameters/filter 0x237
+
+    # timer
+    write /sys/kernel/tracing/events/timer/timer_expire_entry/enable 1
+    write /sys/kernel/tracing/events/timer/timer_expire_exit/enable 1
+    write /sys/kernel/tracing/events/timer/hrtimer_cancel/enable 1
+    write /sys/kernel/tracing/events/timer/hrtimer_expire_entry/enable 1
+    write /sys/kernel/tracing/events/timer/hrtimer_expire_exit/enable 1
+    write /sys/kernel/tracing/events/timer/hrtimer_init/enable 1
+    write /sys/kernel/tracing/events/timer/hrtimer_start/enable 1
+    #enble FTRACE for softirq events
+    write /sys/kernel/tracing/events/irq/enable 1
+    #enble FTRACE for Workqueue events
+    write /sys/kernel/tracing/events/workqueue/enable 1
+    # schedular
+    write /sys/kernel/tracing/events/sched/sched_cpu_hotplug/enable 1
+    write /sys/kernel/tracing/events/sched/sched_migrate_task/enable 1
+    write /sys/kernel/tracing/events/sched/sched_pi_setprio/enable 1
+    write /sys/kernel/tracing/events/sched/sched_switch/enable 1
+    write /sys/kernel/tracing/events/sched/sched_wakeup/enable 1
+    write /sys/kernel/tracing/events/sched/sched_wakeup_new/enable 1
+    write /sys/kernel/tracing/events/sched/sched_isolate/enable 1
+    # sound
+    write /sys/kernel/tracing/events/asoc/snd_soc_reg_read/enable 1
+    write /sys/kernel/tracing/events/asoc/snd_soc_reg_write/enable 1
+    # mdp
+    write /sys/kernel/tracing/events/mdss/mdp_video_underrun_done/enable 1
+    # video
+    write /sys/kernel/tracing/events/msm_vidc/enable 1
+    # clock
+    write /sys/kernel/tracing/events/power/clock_set_rate/enable 1
+    write /sys/kernel/tracing/events/power/clock_enable/enable 1
+    write /sys/kernel/tracing/events/power/clock_disable/enable 1
+    write /sys/kernel/tracing/events/power/cpu_frequency/enable 1
+    # regulator
+    write /sys/kernel/tracing/events/regulator/enable 1
+    # power
+    write /sys/kernel/tracing/events/msm_low_power/enable 1
+    write /sys/kernel/tracing/events/power/cpu_frequency/enable 1
+    #thermal
+    write /sys/kernel/tracing/events/thermal/thermal_pre_core_offline/enable 1
+    write /sys/kernel/tracing/events/thermal/thermal_post_core_offline/enable 1
+    write /sys/kernel/tracing/events/thermal/thermal_pre_core_online/enable 1
+    write /sys/kernel/tracing/events/thermal/thermal_post_core_online/enable 1
+    write /sys/kernel/tracing/events/thermal/thermal_pre_frequency_mit/enable 1
+    write /sys/kernel/tracing/events/thermal/thermal_post_frequency_mit/enable 1
+
+    #rmph_send_msg
+    write /sys/kernel/tracing/events/rpmh/rpmh_send_msg/enable 1
+
+    #enable aop with timestamps
+    #echo 33 0x680000 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
+    #echo 48 0xC0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
+    #echo 0x4 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/mcmb_lanes_select
+    #echo 1 0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_mode
+    #echo 1 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_trig_ts
+    #echo 1 >  /sys/bus/coresight/devices/coresight-tpdm-swao-0/enable_source
+    #echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigin
+    #echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigout
+
+    #memory pressure events/oom
+    write /sys/kernel/tracing/events/psi/psi_event/enable 1
+    write /sys/kernel/tracing/events/psi/psi_window_vmstat/enable 1
+
+    # IOMMU events
+    write /sys/kernel/tracing/events/iommu/enable 1
+
+    write /sys/kernel/tracing/tracing_on 1
+
+    # size
+    write /sys/kernel/tracing/buffer_size_kb ${persist.vendor.lge.trace.sizekb}
+
+on property:persist.vendor.lge.service.crash.enable=0
+    # rtb filter
+    write /sys/module/msm_rtb/parameters/filter 0
+
+    # ftrace
+    write /sys/kernel/tracing/tracing_on 0
+
+    # size
+    write /sys/kernel/tracing/buffer_size_kb 1

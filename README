@@ -1,0 +1,44 @@
+TODO
+
+Fingerprint Scanner (UDFPS)
+SELinux
+
+DOCUMENTATION [Started 04/25/2023 | Last Edited 04/25/2023]
+It is best if not necessary for one to get a rooted device with an unlocked bootloader.
+It is also strongly recommended that you retrieve a RW copy of you super image; instructions can be
+found here: https://forum.xda-developers.com/t/magisk-twrp-arm32-64-a8-universal-read-only-to-read-write-for-android-ro2rw-auto-converting-super-system-partitions-to-read-write-mode.4521131/
+Extract the paritions from the super image and, among the extracted, make sure the following is
+present: vendor_a product_a, and system_a. You should then make a directory where you mount
+system. Within system, which serves as root, you mount vendor in /vendor and product in /product.
+I recommend copying the entire filesystem elsewhere so that they don't have to be remounted.
+Disclaimer: The following information is based on what I would if I were to re-create the device
+tree from scratch at the moment of writing this. I cannot guarantee the safety of the actions taken
+and am not responsible for any damages that occur as a result of following these instructions.
+A tree should have BoardConfig.mk, a device.mk file, Android.mk an Android.bp file,
+lineage.dependencies, extract-files.sh, setup-makefiles.sh, proprietary-files.txt,
+lineage_[$codename].mk, and AndroidProducts.mk as to **START** with what is minimally necessary
+for the device tree. You may need a $TOP/hardware/$VENDOR folder and you will need a $TOP/kernel/
+$VENDOR/$BOARD_VERSION folder that contains the kernel for your device; this is usually retrieved
+by the manufacturer. If it is not publically available, you may to need to contact them for it.
+The codename of your device can be found in your stock build.prop file inside the /system folder.
+AndroidProducts.mk should have lineage_timelm.mk set as PRODUCT_MAKEFILES with COMMON_LUNCH_CHOICES
+having 3 options that all start with lineage_[]$codename]-, they have user, userdebug, and eng as
+endings. lineage_[*codename*]- should have device specific values regarding the name, model, release
+build number and other metadata for the device. They can be found in the build.prop files of stock.
+lineage.dependencies should contain whatever outside repository that has to be checked out like
+hardware or kernel folders that you will need for the device's build. The BoardConfig.mk is, as
+expected, where the main board specification configuration is. You can either check your props for those
+values or if your main board has a general board configuration publicly available on a site,
+(ie: at https://git.codelinaro.org/clo/la/platform/vendor/qcom), then you may grab that as a
+template. You'll also need to define the HALs within the device through the vintf manifest files.
+You'll need a device manifest, a device framework matrix, and a device compatibility matrix. The
+first can be found in the vendor/etc folder while the other two can be found in the system/etc
+folder. However, they will likely need to be modified in some matter later on. HALs are likely
+to be missing from it even if they are active on your build. As such, you should command the
+following to your device through terminal: "/system/bin/lshal --init-vintf > /path/to/file.xml"
+This generates a skeleton device manifest. Extract it through adb if necessary. Check to make
+sure each HAL is listed in the device manifest that was found in vendor/etc. Insert the version
+and interface tags which are missing from the skeleton manifest. Those values can be found within
+the fqname under each HAL. Double check to make sure all HALs are defined within the framework
+compatibility matrix. The compatible HALs are usually assigned as a range of versions. Adjust
+these versions as appropriate.

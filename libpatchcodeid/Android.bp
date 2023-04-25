@@ -1,0 +1,46 @@
+cc_library_shared {
+
+    name: "libpatchcodeid",
+    vendor_available: true,
+    system_ext_specific : true,
+
+    srcs: [
+        "libpatchcodeid.c",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libcutils"
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    export_include_dirs: ["."],
+}
+
+cc_library_shared {
+
+    name: "libpatchcodeid_vendor",
+    vendor: true,
+
+    srcs: [
+        "libpatchcodeid.c",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libcutils",
+     ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    export_include_dirs: ["."],
+}

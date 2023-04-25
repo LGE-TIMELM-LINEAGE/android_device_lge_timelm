@@ -1,0 +1,16 @@
+type carrier_block_device, dev_type;
+type  persdata_abt_block_device, dev_type;
+type eri_block_device,  dev_type;
+type carrier_file, file_type, mlstrustedobject;
+type eri_data_file, file_type, data_file_type;
+type vzw_data_file, file_type, data_file_type;
+type abt_pers_data_file, file_type, data_file_type;
+type persist_lg_data_file, file_type, data_file_type;
+type qseesfs_data_file, file_type, data_file_type;
+type widevine_data_file, file_type, data_file_type;
+type firmware_data_file, file_type, data_file_type;
+type els_file, file_type;
+type sns_file, file_type;
+type mpt_file, file_type;
+type srtc_file, file_type;
+type power_file, file_type;

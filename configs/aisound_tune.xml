@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--><config>
+    <tab name="common">
+        <item name="agc_target_spk" value="-23.0"/>   <!-- float | [-40.0, -20.0] dB | default:-24.0 -->
+        <item name="agc_target_hp" value="-20.0"/>   <!-- float | [-40.0, -20.0] dB | default:-24.0 -->
+        <item name="agc_min_spk" value="-3.0"/>   <!-- float | [-18.00, 0.00] | default: -18.00 -->
+        <item name="agc_min_hp" value="-3.0"/>   <!-- float | [-18.00, 0.00] | default: -18.00 -->
+        <item name="agc_max_spk" value="4.0"/>   <!-- float | [0, 18.00] | default: 8.00 -->
+        <item name="agc_max_hp" value="5.0"/>   <!-- float | [0, 18.00] | default: 8.00 -->
+        <item name="limitter_target_surround_headphone" value="0.0"/>   <!-- float | [-70.0, 0.0] dB | default: -9.0 -->
+        <item name="limitter_target_surround_speaker" value="-8.5"/>   <!-- float | [-70.0, 0.0] dB | default: -12.0 -->
+        <item name="geq10band_comp_weight_max_poistiveavg" value="0.9"/>   <!-- float | [0.0, 1.0] | default: 0.5 -->
+    </tab>
+
+    <tab name="5bandpeq">
+        <device name="speaker">
+            <band name="band1">
+                <item name="type" value="0"/>
+                <item name="fc" value="2900.0"/>
+                <item name="gain" value="-4.0"/>
+                <item name="q" value="4.0"/>
+            </band>
+            <band name="band2">
+                <item name="type" value="3"/>
+                <item name="fc" value="12000.0"/>
+                <item name="gain" value="0.0"/>
+                <item name="q" value="0.7"/>
+            </band>
+            <band name="band3">
+                <item name="type" value="0"/>
+                <item name="fc" value="5000.0"/>
+                <item name="gain" value="-3.0"/>
+                <item name="q" value="6.0"/>
+            </band>
+            <band name="band4">
+                <item name="type" value="7"/>
+                <item name="fc" value="4000.0"/>
+                <item name="gain" value="0.0"/>
+                <item name="q" value="2.0"/>
+            </band>
+            <band name="band5">
+                <item name="type" value="7"/>
+                <item name="fc" value="17000.0"/>
+                <item name="gain" value="0.0"/>
+                <item name="q" value="0.7"/>
+            </band>
+        </device>
+
+        <device name="headphone">
+            <band name="band1">
+                <item name="type" value="6"/>
+                <item name="fc" value="20.0"/>
+                <item name="gain" value="-2.0"/>
+                <item name="q" value="0.7"/>
+            </band>
+            <band name="band2">
+                <item name="type" value="7"/>
+                <item name="fc" value="100.0"/>
+                <item name="gain" value="1.5"/>
+                <item name="q" value="0.5"/>
+            </band>
+            <band name="band3">
+                <item name="type" value="7"/>
+                <item name="fc" value="4000.0"/>
+                <item name="gain" value="4.0"/>
+                <item name="q" value="0.7"/>
+            </band>
+            <band name="band4">
+                <item name="type" value="7"/>
+                <item name="fc" value="5000.0"/>
+                <item name="gain" value="1.0"/>
+                <item name="q" value="0.7"/>
+            </band>
+            <band name="band5">
+                <item name="type" value="7"/>
+                <item name="fc" value="8000.0"/>
+                <item name="gain" value="1.0"/>
+                <item name="q" value="0.7"/>
+            </band>
+        </device>
+    </tab>
+
+    <tab name="surround">
+
+        <device name="speaker">
+            <genre name="music">
+                <component name="primary">
+                    <band name="band1" value="0.0"/>
+                    <band name="band2" value="6.0"/>
+                    <band name="band3" value="6.0"/>
+                    <band name="band4" value="4.0"/>
+                    <band name="band5" value="4.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="1.0"/>
+                    <band name="band8" value="1.0"/>
+                    <band name="band9" value="1.0"/>
+                    <band name="band10" value="1.0"/>
+                    <band name="band11" value="-2.0"/>
+                    <band name="band12" value="-2.0"/>
+                    <band name="band13" value="-3.0"/>
+                    <band name="band14" value="-6.0"/>
+                    <band name="band15" value="-4.0"/>
+                    <band name="band16" value="-6.0"/>
+                    <band name="band17" value="-1.0"/>
+                    <band name="band18" value="0.0"/>
+                    <band name="band19" value="0.0"/>
+                    <band name="band20" value="0.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="-3.0"/>
+                    <band name="band2" value="-12.0"/>
+                    <band name="band3" value="-15.0"/>
+                    <band name="band4" value="-12.0"/>
+                    <band name="band5" value="-9.0"/>
+                    <band name="band6" value="-9.0"/>
+                    <band name="band7" value="-6.0"/>
+                    <band name="band8" value="-3.0"/>
+                    <band name="band9" value="-2.0"/>
+                    <band name="band10" value="-2.0"/>
+                    <band name="band11" value="-6.0"/>
+                    <band name="band12" value="-4.0"/>
+                    <band name="band13" value="-4.0"/>
+                    <band name="band14" value="-5.0"/>
+                    <band name="band15" value="-6.0"/>
+                    <band name="band16" value="-4.0"/>
+                    <band name="band17" value="-6.0"/>
+                    <band name="band18" value="-3.0"/>
+                    <band name="band19" value="-1.0"/>
+                    <band name="band20" value="-1.0"/>
+                </component>
+            </genre>
+            <genre name="voice">
+                 <component name="primary">
+                    <band name="band1" value="6.0"/>
+                    <band name="band2" value="7.0"/>
+                    <band name="band3" value="6.0"/>
+                    <band name="band4" value="6.0"/>
+                    <band name="band5" value="6.0"/>
+                    <band name="band6" value="4.0"/>
+                    <band name="band7" value="4.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="3.0"/>
+                    <band name="band11" value="3.0"/>
+                    <band name="band12" value="-1.0"/>
+                    <band name="band13" value="-2.0"/>
+                    <band name="band14" value="-5.0"/>
+                    <band name="band15" value="-4.0"/>
+                    <band name="band16" value="-4.0"/>
+                    <band name="band17" value="1.0"/>
+                    <band name="band18" value="0.0"/>
+                    <band name="band19" value="3.0"/>
+                    <band name="band20" value="3.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="-9.0"/>
+                    <band name="band2" value="-9.0"/>
+                    <band name="band3" value="-9.0"/>
+                    <band name="band4" value="-9.0"/>
+                    <band name="band5" value="-9.0"/>
+                    <band name="band6" value="-9.0"/>
+                    <band name="band7" value="-9.0"/>
+                    <band name="band8" value="-9.0"/>
+                    <band name="band9" value="-9.0"/>
+                    <band name="band10" value="-9.0"/>
+                    <band name="band11" value="-9.0"/>
+                    <band name="band12" value="-9.0"/>
+                    <band name="band13" value="-9.0"/>
+                    <band name="band14" value="-9.0"/>
+                    <band name="band15" value="-9.0"/>
+                    <band name="band16" value="-9.0"/>
+                    <band name="band17" value="-9.0"/>
+                    <band name="band18" value="-9.0"/>
+                    <band name="band19" value="-9.0"/>
+                    <band name="band20" value="-9.0"/>
+                </component>
+            </genre>
+            <genre name="cinema">
+                <component name="primary">
+                    <band name="band1" value="6.0"/>
+                    <band name="band2" value="12.0"/>
+                    <band name="band3" value="12.0"/>
+                    <band name="band4" value="8.0"/>
+                    <band name="band5" value="6.0"/>
+                    <band name="band6" value="2.0"/>
+                    <band name="band7" value="2.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="2.0"/>
+                    <band name="band11" value="2.0"/>
+                    <band name="band12" value="2.0"/>
+                    <band name="band13" value="1.0"/>
+                    <band name="band14" value="-5.0"/>
+                    <band name="band15" value="-3.0"/>
+                    <band name="band16" value="2.0"/>
+                    <band name="band17" value="4.0"/>
+                    <band name="band18" value="3.0"/>
+                    <band name="band19" value="2.0"/>
+                    <band name="band20" value="2.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="2.0"/>
+                    <band name="band2" value="2.0"/>
+                    <band name="band3" value="2.0"/>
+                    <band name="band4" value="2.0"/>
+                    <band name="band5" value="3.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="2.0"/>
+                    <band name="band8" value="2.0"/>
+                    <band name="band9" value="2.0"/>
+                    <band name="band10" value="2.0"/>
+                    <band name="band11" value="0.0"/>
+                    <band name="band12" value="0.0"/>
+                    <band name="band13" value="-2.0"/>
+                    <band name="band14" value="-6.0"/>
+                    <band name="band15" value="-5.0"/>
+                    <band name="band16" value="4.0"/>
+                    <band name="band17" value="8.0"/>
+                    <band name="band18" value="8.0"/>
+                    <band name="band19" value="8.0"/>
+                    <band name="band20" value="8.0"/>
+                </component>
+            </genre>
+            <genre name="game">
+                <component name="primary">
+                    <band name="band1" value="6.0"/>
+                    <band name="band2" value="12.0"/>
+                    <band name="band3" value="12.0"/>
+                    <band name="band4" value="8.0"/>
+                    <band name="band5" value="6.0"/>
+                    <band name="band6" value="2.0"/>
+                    <band name="band7" value="2.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="2.0"/>
+                    <band name="band11" value="2.0"/>
+                    <band name="band12" value="2.0"/>
+                    <band name="band13" value="1.0"/>
+                    <band name="band14" value="-5.0"/>
+                    <band name="band15" value="-3.0"/>
+                    <band name="band16" value="2.0"/>
+                    <band name="band17" value="4.0"/>
+                    <band name="band18" value="3.0"/>
+                    <band name="band19" value="2.0"/>
+                    <band name="band20" value="2.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="2.0"/>
+                    <band name="band2" value="2.0"/>
+                    <band name="band3" value="2.0"/>
+                    <band name="band4" value="2.0"/>
+                    <band name="band5" value="3.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="2.0"/>
+                    <band name="band8" value="2.0"/>
+                    <band name="band9" value="2.0"/>
+                    <band name="band10" value="2.0"/>
+                    <band name="band11" value="0.0"/>
+                    <band name="band12" value="0.0"/>
+                    <band name="band13" value="-2.0"/>
+                    <band name="band14" value="-6.0"/>
+                    <band name="band15" value="-5.0"/>
+                    <band name="band16" value="4.0"/>
+                    <band name="band17" value="8.0"/>
+                    <band name="band18" value="8.0"/>
+                    <band name="band19" value="8.0"/>
+                    <band name="band20" value="8.0"/>
+                </component>
+            </genre>
+        </device>
+        <device name="headphone">
+            <genre name="music">
+                <component name="primary">
+                    <band name="band1" value="10.0"/>
+                    <band name="band2" value="4.0"/>
+                    <band name="band3" value="3.0"/>
+                    <band name="band4" value="2.0"/>
+                    <band name="band5" value="2.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="4.0"/>
+                    <band name="band8" value="4.0"/>
+                    <band name="band9" value="4.0"/>
+                    <band name="band10" value="4.0"/>
+                    <band name="band11" value="3.0"/>
+                    <band name="band12" value="3.0"/>
+                    <band name="band13" value="3.0"/>
+                    <band name="band14" value="4.0"/>
+                    <band name="band15" value="1.0"/>
+                    <band name="band16" value="2.0"/>
+                    <band name="band17" value="5.0"/>
+                    <band name="band18" value="8.0"/>
+                    <band name="band19" value="7.0"/>
+                    <band name="band20" value="7.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="3.0"/>
+                    <band name="band2" value="-9.0"/>
+                    <band name="band3" value="-16.0"/>
+                    <band name="band4" value="-16.0"/>
+                    <band name="band5" value="-6.0"/>
+                    <band name="band6" value="-3.0"/>
+                    <band name="band7" value="-1.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="5.0"/>
+                    <band name="band11" value="7.0"/>
+                    <band name="band12" value="7.0"/>
+                    <band name="band13" value="5.0"/>
+                    <band name="band14" value="0.0"/>
+                    <band name="band15" value="3.0"/>
+                    <band name="band16" value="5.0"/>
+                    <band name="band17" value="4.0"/>
+                    <band name="band18" value="8.0"/>
+                    <band name="band19" value="5.0"/>
+                    <band name="band20" value="3.0"/>
+                </component>
+            </genre>
+            <genre name="voice">
+                <component name="primary">
+                    <band name="band1" value="9.0"/>
+                    <band name="band2" value="5.0"/>
+                    <band name="band3" value="6.0"/>
+                    <band name="band4" value="5.0"/>
+                    <band name="band5" value="4.0"/>
+                    <band name="band6" value="4.0"/>
+                    <band name="band7" value="5.0"/>
+                    <band name="band8" value="5.0"/>
+                    <band name="band9" value="5.0"/>
+                    <band name="band10" value="4.0"/>
+                    <band name="band11" value="1.0"/>
+                    <band name="band12" value="0.0"/>
+                    <band name="band13" value="2.0"/>
+                    <band name="band14" value="3.0"/>
+                    <band name="band15" value="3.0"/>
+                    <band name="band16" value="6.0"/>
+                    <band name="band17" value="6.0"/>
+                    <band name="band18" value="0.0"/>
+                    <band name="band19" value="6.0"/>
+                    <band name="band20" value="6.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="6.0"/>
+                    <band name="band2" value="3.0"/>
+                    <band name="band3" value="3.0"/>
+                    <band name="band4" value="3.0"/>
+                    <band name="band5" value="3.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="3.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="3.0"/>
+                    <band name="band11" value="1.0"/>
+                    <band name="band12" value="0.0"/>
+                    <band name="band13" value="1.0"/>
+                    <band name="band14" value="3.0"/>
+                    <band name="band15" value="3.0"/>
+                    <band name="band16" value="3.0"/>
+                    <band name="band17" value="3.0"/>
+                    <band name="band18" value="3.0"/>
+                    <band name="band19" value="3.0"/>
+                    <band name="band20" value="3.0"/>
+                </component>
+            </genre>
+            <genre name="cinema">
+                <component name="primary">
+                    <band name="band1" value="12.0"/>
+                    <band name="band2" value="6.0"/>
+                    <band name="band3" value="4.0"/>
+                    <band name="band4" value="3.0"/>
+                    <band name="band5" value="2.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="3.0"/>
+                    <band name="band8" value="4.0"/>
+                    <band name="band9" value="5.0"/>
+                    <band name="band10" value="4.0"/>
+                    <band name="band11" value="3.0"/>
+                    <band name="band12" value="3.0"/>
+                    <band name="band13" value="3.0"/>
+                    <band name="band14" value="4.0"/>
+                    <band name="band15" value="5.0"/>
+                    <band name="band16" value="5.0"/>
+                    <band name="band17" value="5.0"/>
+                    <band name="band18" value="9.0"/>
+                    <band name="band19" value="7.0"/>
+                    <band name="band20" value="7.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="5.0"/>
+                    <band name="band2" value="3.0"/>
+                    <band name="band3" value="1.0"/>
+                    <band name="band4" value="1.0"/>
+                    <band name="band5" value="1.0"/>
+                    <band name="band6" value="0.0"/>
+                    <band name="band7" value="2.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="5.0"/>
+                    <band name="band11" value="8.0"/>
+                    <band name="band12" value="8.0"/>
+                    <band name="band13" value="8.0"/>
+                    <band name="band14" value="8.0"/>
+                    <band name="band15" value="8.0"/>
+                    <band name="band16" value="8.0"/>
+                    <band name="band17" value="9.0"/>
+                    <band name="band18" value="8.0"/>
+                    <band name="band19" value="5.0"/>
+                    <band name="band20" value="3.0"/>
+                </component>
+            </genre>
+            <genre name="game">
+                <component name="primary">
+                    <band name="band1" value="12.0"/>
+                    <band name="band2" value="6.0"/>
+                    <band name="band3" value="4.0"/>
+                    <band name="band4" value="3.0"/>
+                    <band name="band5" value="2.0"/>
+                    <band name="band6" value="3.0"/>
+                    <band name="band7" value="3.0"/>
+                    <band name="band8" value="4.0"/>
+                    <band name="band9" value="5.0"/>
+                    <band name="band10" value="4.0"/>
+                    <band name="band11" value="3.0"/>
+                    <band name="band12" value="3.0"/>
+                    <band name="band13" value="3.0"/>
+                    <band name="band14" value="4.0"/>
+                    <band name="band15" value="5.0"/>
+                    <band name="band16" value="5.0"/>
+                    <band name="band17" value="5.0"/>
+                    <band name="band18" value="9.0"/>
+                    <band name="band19" value="7.0"/>
+                    <band name="band20" value="7.0"/>
+                </component>
+                <component name="ambient">
+                    <band name="band1" value="5.0"/>
+                    <band name="band2" value="3.0"/>
+                    <band name="band3" value="1.0"/>
+                    <band name="band4" value="1.0"/>
+                    <band name="band5" value="1.0"/>
+                    <band name="band6" value="0.0"/>
+                    <band name="band7" value="2.0"/>
+                    <band name="band8" value="3.0"/>
+                    <band name="band9" value="3.0"/>
+                    <band name="band10" value="5.0"/>
+                    <band name="band11" value="8.0"/>
+                    <band name="band12" value="8.0"/>
+                    <band name="band13" value="8.0"/>
+                    <band name="band14" value="8.0"/>
+                    <band name="band15" value="8.0"/>
+                    <band name="band16" value="8.0"/>
+                    <band name="band17" value="9.0"/>
+                    <band name="band18" value="8.0"/>
+                    <band name="band19" value="5.0"/>
+                    <band name="band20" value="3.0"/>
+                </component>
+            </genre>
+        </device>
+    </tab>
+    <tab name="hp">
+        <mode name="auto">
+            <item name="gain" value="0.1"/>
+            <item name="tail" value="1.0"/>
+        </mode>
+        <mode name="cinema">
+            <item name="gain" value="1.0"/>
+            <item name="tail" value="0.7"/>
+        </mode>
+        <mode name="music">
+            <item name="gain" value="0.7"/>
+            <item name="tail" value="0.5"/>
+        </mode>
+        <mode name="voice">
+            <item name="gain" value="0.0"/>
+            <item name="tail" value="0.0"/>
+        </mode>
+    </tab>
+    <tab name = "remaster">
+        <streaming name="youtube">
+            <param nmae="gain">
+                <category name = "thres1">
+                    <item name ="threshold" value="-90.0" />
+                    <item name ="target_gain" value="-80.0" />
+                </category>
+                <category name = "thres2">
+                    <item name ="threshold" value="-70.0" />
+                    <item name ="target_gain" value="-39.0" />
+                </category>
+                <category name = "thres3">
+                    <item name ="threshold" value="-20.0" />
+                    <item name ="target_gain" value="-11.0" />
+                </category>
+                <category name = "thres4">
+                    <item name ="threshold" value="-6.0" />
+                    <item name ="target_gain" value="-6.5" />
+                </category>
+                <category name = "thres5">
+                    <item name ="threshold" value="0.0" />
+                    <item name ="target_gain" value="-3.0" />
+                </category>
+            </param>
+            <param name="time">
+                <category name = "time">
+                    <item name ="attack" value="0.05" />
+                    <item name ="release" value="0.02" />
+                </category>
+            </param>
+        </streaming>
+        <streaming name="nextflix">
+            <param nmae="gain">
+                <category name = "thres1">
+                    <item name ="threshold" value="-90.0" />
+                    <item name ="target_gain" value="-80.0" />
+                </category>
+                <category name = "thres2">
+                    <item name ="threshold" value="-60.0" />
+                    <item name ="target_gain" value="-35.0" />
+                </category>
+                <category name = "thres3">
+                    <item name ="threshold" value="-40.0" />
+                    <item name ="target_gain" value="-25.0" />
+                </category>
+                <category name = "thres4">
+                    <item name ="threshold" value="-20.0" />
+                    <item name ="target_gain" value="-20.0" />
+                </category>
+                <category name = "thres5">
+                    <item name ="threshold" value="0.0" />
+                    <item name ="target_gain" value="0.0" />
+                </category>
+            </param>
+            <param name="time">
+                <category name = "time">
+                    <item name ="attack" value="0.05" />
+                    <item name ="release" value="0.02" />
+                </category>
+            </param>
+        </streaming>
+        <streaming name="youtubeMusic">
+            <param nmae="gain">
+                <category name = "thres1">
+                    <item name ="threshold" value="-90.0" />
+                    <item name ="target_gain" value="-80.0" />
+                </category>
+                <category name = "thres2">
+                    <item name ="threshold" value="-70.0" />
+                    <item name ="target_gain" value="-39.0" />
+                </category>
+                <category name = "thres3">
+                    <item name ="threshold" value="-20.0" />
+                    <item name ="target_gain" value="-11.0" />
+                </category>
+                <category name = "thres4">
+                    <item name ="threshold" value="-6.0" />
+                    <item name ="target_gain" value="-6.5" />
+                </category>
+                <category name = "thres5">
+                    <item name ="threshold" value="0.0" />
+                    <item name ="target_gain" value="-3.0" />
+                </category>
+            </param>
+            <param name="time">
+                <category name = "time">
+                    <item name ="attack" value="0.05" />
+                    <item name ="release" value="0.02" />
+                </category>
+            </param>
+        </streaming>
+    </tab>
+    <tab name = "game">
+        <device name="speaker">
+            <category name="CTC">
+                <direction name ="front">
+                    <item name ="mch" value="-2.0"/>
+                    <item name ="2ch" value="-2.0"/>
+                </direction>
+                <direction name ="surround">
+                    <item name ="mch" value="-2.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+            </category>
+            <category name="HRTF">
+                <direction name ="front">
+                    <item name ="mch" value="-1.0"/>
+                    <item name ="2ch" value="-1.0"/>
+                </direction>
+                <direction name ="surround">
+                    <item name ="mch" value="-1.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+            </category>
+            <category name="Gain">
+                <direction name ="front">
+                    <item name ="mch" value="0.0"/>
+                    <item name ="2ch" value="0.0"/>
+                </direction>
+                <direction name ="surround">
+                    <item name ="mch" value="0.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+                <direction name ="lpr">
+                    <item name ="mch" value="-9.0"/>
+                    <item name ="2ch" value="-9.0"/>
+                </direction>
+                <direction name ="center">
+                    <item name ="mch" value="-3.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+                <direction name ="lfe">
+                    <item name ="mch" value="-6.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+            </category>
+        </device>
+        <device name="headphone">
+            <category name="CTC">
+                <direction name ="front">
+                    <item name ="mch" value="-4.5"/>
+                    <item name ="2ch" value="-4.5"/>
+                </direction>
+                <direction name ="surround">
+                    <item name ="mch" value="-4.5"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+            </category>
+            <category name="HRTF">
+                <direction name ="front">
+                    <item name ="mch" value="-7.0"/>
+                    <item name ="2ch" value="-7.0"/>
+                </direction>
+                <direction name ="surround">
+                    <item name ="mch" value="-7.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+            </category>
+            <category name="Gain">
+                <direction name ="front">
+                    <item name ="mch" value="0.0"/>
+                    <item name ="2ch" value="0.0"/>
+                </direction>
+                <direction name ="surround">
+                    <item name ="mch" value="0.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+                <direction name ="lpr">
+                    <item name ="mch" value="-12.0"/>
+                    <item name ="2ch" value="-12.0"/>
+                </direction>
+                <direction name ="center">
+                    <item name ="mch" value="-3.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+                <direction name ="lfe">
+                    <item name ="mch" value="-6.0"/>
+                    <item name ="2ch" value="-96.0"/>
+                </direction>
+            </category>
+        </device>
+    </tab>
+    <tab name="game_5bandpeq">
+        <device name="speaker">
+            <band name="band1">
+                <item name="type" value="6"/>
+                <item name="fc" value="100.0"/>
+                <item name="gain" value="-3.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band2">
+                <item name="type" value="4"/>
+                <item name="fc" value="20.0"/>
+                <item name="gain" value="0.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band3">
+                <item name="type" value="1"/>
+                <item name="fc" value="1500.0"/>
+                <item name="gain" value="2.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band4">
+                <item name="type" value="0"/>
+                <item name="fc" value="150.0"/>
+                <item name="gain" value="2.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band5">
+                <item name="type" value="7"/>
+                <item name="fc" value="100.0"/>
+                <item name="gain" value="0.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+        </device>
+
+        <device name="headphone">
+            <band name="band1">
+                <item name="type" value="6"/>
+                <item name="fc" value="100.0"/>
+                <item name="gain" value="-1.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band2">
+                <item name="type" value="1"/>
+                <item name="fc" value="200.0"/>
+                <item name="gain" value="2.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band3">
+                <item name="type" value="0"/>
+                <item name="fc" value="1000.0"/>
+                <item name="gain" value="3.0"/>
+                <item name="q" value="2.0"/>
+            </band>
+            <band name="band4">
+                <item name="type" value="7"/>
+                <item name="fc" value="100.0"/>
+                <item name="gain" value="1.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+            <band name="band5">
+                <item name="type" value="7"/>
+                <item name="fc" value="100.0"/>
+                <item name="gain" value="1.0"/>
+                <item name="q" value="1.0"/>
+            </band>
+        </device>
+    </tab>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!--  Set the automatic brightness mode on by default  -->
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
+    <!--  Default screen brightness, from 0 to 255. 122 is 50%.  -->
+    <integer name="def_screen_brightness">122</integer>
+    <!--  30 seconds for default screen timeout  -->
+    <integer name="def_screen_off_timeout">30000</integer>
+    <!--  Default for Settings.Global.DEVICE_NAME $1=MODEL -->
+    <string name="def_device_name_simple">LG V60 ThinQ 5G</string>
+</resources>

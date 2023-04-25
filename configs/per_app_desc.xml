@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<app-list version="180118">
+    <app-array sw="1">
+        <item heavy="true">com.adobe.photoshopmix</item>
+        <item heavy="true">com.amazon.mShop.android.shopping</item>
+        <item heavy="true"
+              flick="2">com.android.chrome</item>
+        <item heavy="true">com.facebook.katana</item>
+        <item heavy="true">com.google.android.youtube</item>
+        <item heavy="true"
+              flick="2">com.twitter.android</item>
+        <item flick="2">com.android.gallery3d</item>
+        <item flick="2">com.android.mms</item>
+        <item flick="2">com.android.vending</item>
+        <item flick="2">com.google.android.gm</item>
+        <item powerhint="true">com.lge.camera</item>
+    </app-array>
+</app-list>

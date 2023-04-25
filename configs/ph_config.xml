@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<res-config sw="1" version="20191120" model="timelm">
+    <!-- info : siver max 1.8GHz, gold max 2.4GHz, prime max 2.8GHz -->
+    <hint name="flick.sys.ev"
+          id="101">
+        <set type="normal">
+            <perflock duration="4000">
+                <!-- silver to 1GHz, gold to 1GHz, prime to 1GHz, and sched_boost(conservative) -->
+                0x40800100, 1000, 0x40800000, 1000, 0x40800200, 1000, 0x40C00000, 2
+            </perflock>
+        </set>
+        <set type="heavy">
+            <perflock duration="4000">
+                <!-- silver to 1.2GHz, gold to 1.1GHz, prime to 1.1GHz,
+                     and sched_boost(conservative), cpubw max, llccbw max, l3 max,
+                     storage clk scaling disable -->
+                0x40800100, 1200, 0x40800000, 1100, 0x40800200, 1100, 0x40C00000, 2,
+                0x41800000, 140, 0x43000000, 0xFF, 0x43400000, 0xFFFF, 0x42C10000, 0x1
+            </perflock>
+        </set>
+    </hint>
+    <hint name="procprelaunch.sys.ev"
+          id="99">
+        <perflock duration="100">
+            <!-- big min core 3, prime min core 1, silver to max, gold to max, prime to max,
+                 sched_boost(conservative), pc off, cpubw max, llccbw max, l3 max,
+                 storage clk scaling disable, gpu nap off,
+                 big to prime sched downmigrate 40 , upmigrate 60 -->
+            0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+            0x40800200, 0xFFF, 0x40C00000, 2, 0x40400000, 1, 0x41800000, 140,
+            0x43000000, 0xFF, 0x43400000, 0xFFFF, 0x42C10000, 0x1, 0x4281C000, 0x1,
+            0x40C20200, 40, 0x40C1C200, 60
+        </perflock>
+    </hint>
+    <hint name="app-trans.int.ev"
+          id="100">
+        <set type="launch">
+            <perflock duration="2500">
+                <!-- big min core 3, prime min core 1, silver to max, gold to max, prime to max,
+                     sched_boost(conservative), pc off, cpubw max, llccbw max, l3 max,
+                     storage clk scaling disable, gpu nap off,
+                     big to prime sched downmigrate 40 , upmigrate 60 -->
+                0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+                0x40800200, 0xFFF, 0x40C00000, 2, 0x40400000, 1, 0x41800000, 140,
+                0x43000000, 0xFF, 0x43400000, 0xFFFF, 0x42C10000, 0x1, 0x4281C000, 0x1,
+                0x40C20200, 40, 0x40C1C200, 60
+            </perflock>
+        </set>
+        <set type="heavy">
+            <perflock duration="3000">
+                <!-- big min core 3, prime min core 1, silver to max, gold to max, prime to max,
+                     sched_boost(conservative), pc off, cpubw max, llccbw max, l3 max,
+                     storage clk scaling disable, gpu nap off,
+                     big to prime sched downmigrate 40 , upmigrate 60-->
+                0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+                0x40800200, 0xFFF, 0x40C00000, 2, 0x40400000, 1, 0x41800000, 140,
+                0x43000000, 0xFF, 0x43400000, 0xFFFF, 0x42C10000, 0x1, 0x4281C000, 0x1,
+                0x40C20200, 40, 0x40C1C200, 60
+            </perflock>
+        </set>
+        <set type="game">
+            <perflock duration="10000">
+                <!-- big min core 3, prime min core 1, silver to max, gold to max, prime to max,
+                     sched_boost(conservative), pc off, cpubw max, llccbw max, l3 max
+                     big to prime sched downmigrate 40 , upmigrate 60 -->
+                0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+                0x40800200, 0xFFF, 0x40C00000, 2, 0x40400000, 1, 0x41800000, 140,
+                0x43000000, 0xFF, 0x43400000, 0xFFFF, 0x40C20200, 40, 0x40C1C200, 60
+            </perflock>
+        </set>
+    </hint>
+    <hint name="activity-trans.int.ev"
+          id="103">
+        <perflock duration="500">
+            <!-- big min core 3, prime min core 1, silver to 1.1GHz, gold to 1.7GHz,
+                 prime to 1.7GHz, sched_boost(conservative) -->
+            0x41000000, 0x3, 0x41000200, 0x1, 0x41000200, 0x1, 0x40800100, 1100,
+            0x40800000, 1700, 0x40800200, 1700, 0x40C00000, 2
+        </perflock>
+    </hint>
+    <hint name="perapp.int.ev"
+          id="0xF000">
+        <set type="com.lge.camera">
+            <!-- sched boost(full throttle) -->
+            <perflock duration="2500">
+                0x40C00000, 1
+            </perflock>
+        </set>
+    </hint>
+    <hint name="softkey.sui.ev"
+          id="15"
+          extra="passToPowerHAL">
+        <perflock duration="800">
+            <!-- big min core 3, prime min core 1, silver to 1.3GHz, gold to 825MHz,
+                 prime to 825MHz, sched_boost(conservative), pc off -->
+            0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 1300, 0x40800000, 825,
+            0x40800200, 825, 0x40C00000, 2, 0x40400000, 1
+        </perflock>
+    </hint>
+    <hint name="display-state.sys.ev"
+          id="21">
+        <perflock duration="300">
+            <!-- silver to max, gold to max, prime to max,
+                 sched_boost(conservative) -->
+            0x40800100, 0xFFF, 0x40800000, 0xFFF, 0x40800200, 0xFFF, 0x40C00000, 2
+        </perflock>
+    </hint>
+    <hint name="rotation.sys.ev"
+          id="2">
+        <perflock duration="1000">
+            <!-- big min core 3, prime min core 1, silver to max, gold to max,
+                 prime to max, sched_boost(conservative), pc off -->
+            0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+            0x40800200, 0xFFF, 0x40C00000, 2, 0x40400000, 1
+        </perflock>
+    </hint>
+    <hint name="incomingcall.sys.ev"
+          id="51"
+          extra="passToPowerHAL">
+    </hint>
+    <hint name="mtp.media.ev"
+          id="62">
+        <perflock duration="4000">
+            <!-- silver to 1.61GHz -->
+            0x40800100, 1612
+        </perflock>
+    </hint>
+    <hint name="applaunch.home.dph"
+          id="1">
+        <perflock duration="50">
+            <!-- big min core 3, prime min core 1, silver to max, gold to max, prime to max,
+                 sched_boost(conservative), pc off, cpubw max, llccbw max, l3 max,
+                 storage clk scaling disable, gpu nap off -->
+            0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+            0x40800200, 0xFFF, 0x40C00000, 2, 0x40400000, 1, 0x41800000, 140,
+            0x43000000, 0xFF, 0x43400000, 0xFFFF, 0x42C10000, 0x1, 0x4281C000, 0x1
+        </perflock>
+    </hint>
+    <hint name="wifi.sys.dph"
+          id="6">
+    </hint>
+    <hint name="hotspot.sys.dph"
+          id="7">
+    </hint>
+    <hint name="boost.mms.dph"
+          id="20">
+        <perflock duration="2000">
+            <!-- silver to 1.3GHz, gold to 1.7GHz, prime to 1.7GHz, sched_boost(conservative),
+                 pc off, cpubw max, llccbw max, l3 max -->
+            0x40800100, 1300, 0x40800000, 1700, 0x40800200, 1700, 0x40C00000, 2,
+            0x40400000, 1, 0x41800000, 140, 0x43000000, 0xFF, 0x43400000, 0xFFFF
+        </perflock>
+    </hint>
+    <hint name="boost.lgpay.dph">
+        <set type="init">
+            <perflock duration="5000">
+                <!-- big min core 3, prime min core 1, silver to max, gold to max, prime to max,
+                     sched_boost(full throttle), pc off -->
+                0x41000000, 0x3, 0x41000200, 0x1, 0x40800100, 0xFFF, 0x40800000, 0xFFF,
+                0x40800200, 0xFFF, 0x40C00000, 1, 0x40400000, 1
+            </perflock>
+        </set>
+    </hint>
+    <hint name="bioface.sys.dph">
+        <set type="register">
+            <perflock duration="2000">
+                <!-- silver to max, gold to max, prime to max, sched_boost(full throttle), pc off -->
+                0x40800100, 0xFFF, 0x40800000, 0xFFF, 0x40800200, 0xFFF, 0x40C00000, 1, 0x40400000, 1
+            </perflock>
+        </set>
+        <set type="auth">
+            <perflock duration="1000">
+                <!-- silver to max, gold to max, prime to max, sched_boost(full throttle), pc off -->
+                0x40800100, 0xFFF, 0x40800000, 0xFFF, 0x40800200, 0xFFF, 0x40C00000, 1, 0x40400000, 1
+            </perflock>
+        </set>
+    </hint>
+    <hint name="biohand.sys.dph">
+        <set type="register">
+            <perflock duration="2000">
+                <!-- silver to max, gold to max, prime to max, sched_boost(full throttle), pc off -->
+                0x40800100, 0xFFF, 0x40800000, 0xFFF, 0x40800200, 0xFFF, 0x40C00000, 1, 0x40400000, 1
+            </perflock>
+        </set>
+        <set type="auth">
+            <perflock duration="1000">
+                <!-- silver to max, gold to max, prime to max, sched_boost(full throttle), pc off -->
+                0x40800100, 0xFFF, 0x40800000, 0xFFF, 0x40800200, 0xFFF, 0x40C00000, 1, 0x40400000, 1
+            </perflock>
+        </set>
+    </hint>
+    <hint name="gameboost.sys.dph">
+        <set type="step1">
+            <perflock duration="200">
+                <!-- schedtune boost to 10 -->
+                0x40C70000, 10
+            </perflock>
+        </set>
+        <set type="step2">
+            <perflock duration="200">
+                <!-- schedtune boost to 30 -->
+                0x40C70000, 30
+            </perflock>
+        </set>
+        <set type="step3">
+            <perflock duration="100">
+                <!-- schedtune boost to 50 -->
+                0x40C70000, 50
+            </perflock>
+        </set>
+    </hint>
+    <hint name="drawing.sys.ev"
+          id="123">
+        <perflock duration="2000">
+            0x40800100, 1804, 0x40800000, 2246, 0x40C00000, 1
+            <!-- Little, Big , boost -->
+        </perflock>
+    </hint>
+</res-config>
+

@@ -1,0 +1,234 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.target.wigig.rc",
+    src: "init.target.wigig.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.ufs.rc",
+    src: "init.qti.ufs.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "init.qcom.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+
+prebuilt_etc {
+    name: "init.lge.audio.rc",
+    src: "init.lge.audio.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.lge.fingerprints.rc",
+    src: "init.lge.fingerprints.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.lge.power.rc",
+    src: "init.lge.power.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.lge.sensors.rc",
+    src: "init.lge.sensors.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.display_boot.rc",
+    src: "init.qti.display_boot.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.lge.usb.configfs.rc",
+    src: "init.lge.usb.configfs.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.lge.usb.rc",
+    src: "init.lge.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+
+prebuilt_etc {
+    name: "init.kona.rc",
+    src: "init.kona.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+
+prebuilt_etc {
+    name: "init.timelm_vendor.rc",
+    src: "init.timelm_vendor.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.timelm.rc",
+    src: "init.timelm.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.lge.atd.rc",
+    src: "init.lge.atd.rc",
+    sub_dir: "init/factory",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "init.class_main.sh",
+    vendor: true,
+}
+
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "init.qcom.sh",
+    vendor: true,
+}
+
+
+sh_binary {
+    name: "init.lge.forced_usb_path_change.sh",
+    src: "init.lge.forced_usb_path_change.sh",
+    vendor: true,
+}
+
+
+
+sh_binary {
+    name: "init.lge.usb.default.sh",
+    src: "init.lge.usb.default.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.lge.usb.lao.sh",
+    src: "init.lge.usb.lao.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.lge.usb.diag.sh",
+    src: "init.lge.usb.diag.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.lge.usb.sh",
+    src: "init.lge.usb.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.lge.zramswap.sh",
+    src: "init.lge.zramswap.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.crda.sh",
+    src: "init.crda.sh",
+    vendor: true,
+}
+sh_binary {
+    name: "init.mdm.sh",
+    src: "init.mdm.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.class_core.sh",
+    src: "init.qcom.class_core.sh",
+    vendor: true,
+}
+
+
+sh_binary {
+    name: "init.qcom.coex.sh",
+    src: "init.qcom.coex.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sdio.sh",
+    src: "init.qcom.sdio.sh",
+    vendor: true,
+}
+
+
+sh_binary {
+    name: "init.qti.chg_policy.sh",
+    src: "init.qti.chg_policy.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "init.qti.dcvs.sh",
+    vendor: true,
+}
+
+
+sh_binary {
+    name: "init.qti.qcv.sh",
+    src: "init.qti.qcv.sh",
+    vendor: true,
+}

@@ -1,0 +1,11 @@
+# EGIS fingerprint calibration data
+on post-fs-data
+   mkdir /mnt/vendor/persist-lg/egis 0700 system system
+   mkdir /data/vendor/fingerprintdump 0775 system system
+
+on boot
+   chown system system /dev/esfp0
+   chmod 0644 /dev/esfp0
+
+on property:ro.vendor.lge.minios.bootstart=1
+   stop vendor.lge-biometrics-fingerprint-hal-2-2
